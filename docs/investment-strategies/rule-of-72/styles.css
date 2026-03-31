@@ -1,0 +1,260 @@
+:root {
+  --bg: #f4efe4;
+  --bg-accent: #efe2c9;
+  --panel: rgba(255, 251, 244, 0.88);
+  --panel-border: rgba(71, 60, 46, 0.14);
+  --ink: #1f2933;
+  --muted: #67707a;
+  --accent: #14505d;
+  --accent-strong: #0b3442;
+  --shadow: 0 22px 48px rgba(27, 35, 39, 0.14);
+  --display-font: "Palatino Linotype", "Book Antiqua", Baskerville, Georgia, serif;
+  --body-font: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--body-font);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(20, 80, 93, 0.12), transparent 30%),
+    radial-gradient(circle at right 20% top 10%, rgba(177, 128, 72, 0.14), transparent 22%),
+    linear-gradient(180deg, var(--bg) 0%, #f9f5ec 100%);
+}
+
+.page-shell {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 48px 24px 56px;
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--display-font);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4.25rem);
+  line-height: 0.98;
+  max-width: 12ch;
+}
+
+h2 {
+  font-size: 1.35rem;
+  line-height: 1.05;
+}
+
+.hero-copy,
+.subtle {
+  margin: 12px 0 0;
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.6;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(320px, 0.95fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.chart-card,
+.info-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.chart-card {
+  padding: 20px;
+}
+
+.info-card {
+  padding: 20px;
+}
+
+.side-column {
+  display: grid;
+  gap: 16px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.card-header.compact {
+  margin-bottom: 14px;
+}
+
+.canvas-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 243, 0.94) 0%, rgba(249, 243, 231, 0.97) 100%);
+  border: 1px solid rgba(71, 60, 46, 0.1);
+  padding: 8px;
+}
+
+#chartCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.ghost-button {
+  border: 1px solid rgba(11, 52, 66, 0.2);
+  background: rgba(20, 80, 93, 0.08);
+  color: var(--accent-strong);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.ghost-button:hover {
+  transform: translateY(-1px);
+  background: rgba(20, 80, 93, 0.14);
+  border-color: rgba(11, 52, 66, 0.28);
+}
+
+.rate-header {
+  margin-bottom: 14px;
+}
+
+.rate-value {
+  margin-top: 8px;
+  font-family: var(--display-font);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--accent-strong);
+}
+
+.slider-label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+#rateSlider {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.slider-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.value-list {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.value-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--formula-color);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.75);
+}
+
+.label-text {
+  font-weight: 700;
+}
+
+.value-text {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+.formula-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.formula-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.formula-copy {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.formula-copy strong {
+  display: block;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+@media (max-width: 1060px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 28px 14px 32px;
+  }
+
+  .chart-card,
+  .info-card {
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  .card-header {
+    flex-direction: column;
+  }
+}

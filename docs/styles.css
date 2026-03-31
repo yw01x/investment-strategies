@@ -1,0 +1,122 @@
+:root {
+  --bg: #f5efe2;
+  --panel: rgba(255, 251, 244, 0.9);
+  --panel-border: rgba(63, 55, 41, 0.16);
+  --ink: #1f2933;
+  --muted: #68727c;
+  --accent: #8c4f1f;
+  --accent-strong: #5a2f12;
+  --shadow: 0 24px 52px rgba(26, 32, 37, 0.15);
+  --display-font: "Palatino Linotype", "Book Antiqua", Baskerville, Georgia, serif;
+  --body-font: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--body-font);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at left top, rgba(140, 79, 31, 0.14), transparent 28%),
+    radial-gradient(circle at right top, rgba(20, 80, 93, 0.12), transparent 24%),
+    linear-gradient(180deg, #f8f4ec 0%, var(--bg) 100%);
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 24px 64px;
+}
+
+.hero {
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--display-font);
+  font-weight: 700;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: 0.98;
+}
+
+h2 {
+  font-size: 1.7rem;
+  line-height: 1.05;
+}
+
+.hero-copy {
+  margin: 14px 0 0;
+  max-width: 60ch;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.assignments {
+  display: grid;
+  gap: 18px;
+}
+
+.assignment-card {
+  padding: 24px;
+  border-radius: 26px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow);
+}
+
+.card-meta {
+  margin-bottom: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.assignment-card p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 56ch;
+}
+
+.assignment-link {
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fffdf8;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    padding: 32px 16px 40px;
+  }
+
+  .assignment-card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+}
