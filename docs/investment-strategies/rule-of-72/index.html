@@ -9,30 +9,46 @@
 <body>
   <main class="page-shell">
     <section class="hero">
-      <p class="eyebrow">Columbia Assignment Viewer</p>
-      <h1>Interactive Rule of 72 Comparator</h1>
+      <div class="hero-topline">
+        <p class="eyebrow">Investment Strategies · Assignment 1</p>
+        <span class="header-pill">Static Demo</span>
+      </div>
+      <h1>Rule of 72 Comparator</h1>
       <p class="hero-copy">
-        This static page mirrors the desktop app in the browser. Drag the rate slider to compare
-        the exact doubling-time formula against four approximations and the Rule of 72.
+        Compare the exact doubling-time relation with four logarithm approximations and the Rule of 72.
+        The upper chart shows the full curves; the lower chart shows percent error versus Exact so the
+        differences stay visible instead of collapsing into one line.
       </p>
     </section>
 
     <section class="workspace">
-      <div class="chart-card">
+      <section class="panel card chart-card">
         <div class="card-header">
           <div>
-            <h2>Chart</h2>
-            <p class="subtle">Six curves stay visible; only the highlighted points and values move.</p>
+            <span class="badge">Chart Desk</span>
+            <h2 class="section-title">Doubling-Time Curves and Relative Error</h2>
+            <p class="subtle">
+              Top panel: absolute doubling time n. Bottom panel: percent error, computed as
+              (Approx - Exact) / Exact.
+            </p>
           </div>
           <button id="downloadButton" class="ghost-button" type="button">Download PNG</button>
         </div>
+
+        <div id="legendList" class="legend-row" aria-label="Formula legend"></div>
+
         <div class="canvas-wrap">
           <canvas id="chartCanvas" aria-label="Interactive Rule of 72 comparison chart"></canvas>
         </div>
-      </div>
 
-      <aside class="side-column">
-        <section class="info-card">
+        <p class="chart-footnote subtle">
+          The guide line marks the currently selected r in both panels. Exact is the baseline in the
+          lower chart, so only approximations and the Rule of 72 appear there.
+        </p>
+      </section>
+
+      <aside class="controls">
+        <section class="panel rate-panel">
           <div class="rate-header">
             <p class="eyebrow">Selected Rate</p>
             <div id="rateOutput" class="rate-value">r = 0.083 (8.3%)</div>
@@ -47,26 +63,28 @@
             <span>15%</span>
             <span>20%</span>
           </div>
+
+          <div class="rate-note">
+            <span class="badge badge-title">Reading Guide</span>
+            <p class="subtle">
+              Positive error means the approximation overshoots Exact. Negative error means it
+              understates Exact.
+            </p>
+          </div>
         </section>
 
-        <section class="info-card">
+        <section class="panel card formula-panel">
           <div class="card-header compact">
             <div>
-              <h2>Current Values</h2>
-              <p class="subtle">Doubling time for the selected r.</p>
+              <span class="badge">Formula Cards</span>
+              <h2 class="section-title">Current Readout</h2>
+              <p class="subtle">
+                Each card shows the current value, the explicit formula, and which approximation was used.
+              </p>
             </div>
           </div>
-          <dl id="valueList" class="value-list"></dl>
-        </section>
 
-        <section class="info-card">
-          <div class="card-header compact">
-            <div>
-              <h2>Formulas</h2>
-              <p class="subtle">Exact is the reference curve.</p>
-            </div>
-          </div>
-          <ul id="formulaList" class="formula-list"></ul>
+          <div id="formulaCards" class="formula-cards"></div>
         </section>
       </aside>
     </section>
