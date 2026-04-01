@@ -1,6 +1,9 @@
 const MIN_SLIDER_VALUE = 100;
 const MAX_SLIDER_VALUE = 5000;
 const DEFAULT_SLIDER_VALUE = 830;
+const RATE_SCALE = 10000;
+const MIN_RATE = MIN_SLIDER_VALUE / RATE_SCALE;
+const MAX_RATE = MAX_SLIDER_VALUE / RATE_SCALE;
 const X_TICKS = [0.01, 0.1, 0.2, 0.3, 0.4, 0.5];
 
 const FORMULAS = [
@@ -52,8 +55,8 @@ const FORMULAS = [
   {
     id: "approx4",
     label: "Approx 4",
-    formulaText: "n = 6931 / (10000(r - r^2 / 2))",
-    approxText: "Equivalent to 0.6931 / (r - r^2 / 2). Keeping the numerator integer requires 6931 / 10000, so this one is the exception to the 100-denominator comparison form.",
+    formulaText: "n = 69.31 / (100(r - r^2 / 2))",
+    approxText: "Equivalent to 0.6931 / (r - r^2 / 2). Writing it as 69.31 / 100 keeps the same comparison structure as Rule of 72 while preserving the more precise numerator.",
     color: "#9467bd",
     marker: "oval",
     lineDash: [14, 5, 2, 5],
@@ -77,6 +80,7 @@ const ERROR_FORMULAS = FORMULAS.filter((formula) => !formula.isReference);
 
 const state = {
   sliderValue: DEFAULT_SLIDER_VALUE,
+  isEditingRateInput: false,
 };
 
 const canvas = document.getElementById("chartCanvas");
@@ -117,11 +121,27 @@ rateInput.addEventListener("input", () => {
     return;
   }
 
-  setRate(parsedValue);
+  if (parsedValue < MIN_RATE || parsedValue > MAX_RATE) {
+    return;
+  }
+
+  setRate(parsedValue, false);
+});
+
+rateInput.addEventListener("focus", () => {
+  state.isEditingRateInput = true;
 });
 
 rateInput.addEventListener("blur", () => {
-  rateInput.value = formatDecimal(sliderValueToRate(state.sliderValue));
+  state.isEditingRateInput = false;
+  commitRateInput();
+});
+
+rateInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    rateInput.blur();
+  }
 });
 
 downloadButton.addEventListener("click", () => {
@@ -133,13 +153,15 @@ downloadButton.addEventListener("click", () => {
 
 window.addEventListener("resize", updateChart);
 
-function updateAll() {
+function updateAll(syncRateInput = true) {
   const rate = sliderValueToRate(state.sliderValue);
   const values = calculateValues(rate);
   const errors = calculateErrors(values);
 
   slider.value = String(state.sliderValue);
-  rateInput.value = formatDecimal(rate);
+  if (syncRateInput && !state.isEditingRateInput) {
+    rateInput.value = formatDecimal(rate);
+  }
   rateOutput.textContent = `r = ${formatDecimal(rate)} (${formatPercent(rate)})`;
   slider.style.setProperty("--fill-percent", `${sliderPercent(state.sliderValue).toFixed(2)}%`);
   renderFormulaCards(values, errors);
@@ -631,24 +653,38 @@ function lineStyleForLegend(formula) {
 }
 
 function sliderValueToRate(sliderValue) {
-  return sliderValue / 10000;
+  return sliderValue / RATE_SCALE;
 }
 
 function rateToSliderValue(rate) {
-  return Math.round(rate * 10000);
+  return Math.round(rate * RATE_SCALE);
 }
 
-function setSliderValue(sliderValue) {
+function setSliderValue(sliderValue, syncRateInput = true) {
   state.sliderValue = clampSliderValue(sliderValue);
-  updateAll();
+  updateAll(syncRateInput);
 }
 
-function setRate(rate) {
-  setSliderValue(rateToSliderValue(rate));
+function setRate(rate, syncRateInput = true) {
+  setSliderValue(rateToSliderValue(rate), syncRateInput);
 }
 
 function clampSliderValue(sliderValue) {
   return Math.min(MAX_SLIDER_VALUE, Math.max(MIN_SLIDER_VALUE, Math.round(sliderValue)));
+}
+
+function clampRate(rate) {
+  return Math.min(MAX_RATE, Math.max(MIN_RATE, rate));
+}
+
+function commitRateInput() {
+  const parsedValue = Number(rateInput.value);
+  if (!Number.isFinite(parsedValue)) {
+    rateInput.value = formatDecimal(sliderValueToRate(state.sliderValue));
+    return;
+  }
+
+  setRate(clampRate(parsedValue));
 }
 
 function sliderPercent(sliderValue) {
