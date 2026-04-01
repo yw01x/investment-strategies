@@ -19,8 +19,8 @@ const FORMULAS = [
   {
     id: "approx1",
     label: "Approx 1",
-    formulaText: "n = 0.69 / r",
-    approxText: "Uses ln(1+r) approx r and ln(2) approx 0.69.",
+    formulaText: "n = 69 / (100r)",
+    approxText: "Equivalent to 0.69 / r. Writing it as 69 / (100r) makes it directly comparable to 72 / (100r).",
     color: "#ff7f0e",
     marker: "diamond",
     lineDash: [12, 8],
@@ -30,8 +30,8 @@ const FORMULAS = [
   {
     id: "approx2",
     label: "Approx 2",
-    formulaText: "n = 0.69 / (r - r^2 / 2)",
-    approxText: "Uses ln(1+r) approx r - r^2 / 2 and ln(2) approx 0.69.",
+    formulaText: "n = 69 / (100(r - r^2 / 2))",
+    approxText: "Equivalent to 0.69 / (r - r^2 / 2). The 69 / 100 form makes comparison with Rule of 72 easier.",
     color: "#2ca02c",
     marker: "square",
     lineDash: [7, 5],
@@ -41,8 +41,8 @@ const FORMULAS = [
   {
     id: "approx3",
     label: "Approx 3",
-    formulaText: "n = 0.70 / (r - r^2 / 2)",
-    approxText: "Uses ln(1+r) approx r - r^2 / 2 and ln(2) approx 0.70.",
+    formulaText: "n = 70 / (100(r - r^2 / 2))",
+    approxText: "Equivalent to 0.70 / (r - r^2 / 2). The numerator becomes the integer 70, which lines up cleanly against 72.",
     color: "#d62728",
     marker: "triangle",
     lineDash: [3, 5],
@@ -52,8 +52,8 @@ const FORMULAS = [
   {
     id: "approx4",
     label: "Approx 4",
-    formulaText: "n = 0.6931 / (r - r^2 / 2)",
-    approxText: "Uses ln(1+r) approx r - r^2 / 2 and ln(2) approx 0.6931.",
+    formulaText: "n = 6931 / (10000(r - r^2 / 2))",
+    approxText: "Equivalent to 0.6931 / (r - r^2 / 2). Keeping the numerator integer requires 6931 / 10000, so this one is the exception to the 100-denominator comparison form.",
     color: "#9467bd",
     marker: "oval",
     lineDash: [14, 5, 2, 5],
