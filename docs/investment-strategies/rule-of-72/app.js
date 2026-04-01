@@ -1,6 +1,7 @@
-const MIN_SLIDER_VALUE = 10;
-const MAX_SLIDER_VALUE = 200;
-const DEFAULT_SLIDER_VALUE = 83;
+const MIN_SLIDER_VALUE = 100;
+const MAX_SLIDER_VALUE = 5000;
+const DEFAULT_SLIDER_VALUE = 830;
+const X_TICKS = [0.01, 0.1, 0.2, 0.3, 0.4, 0.5];
 
 const FORMULAS = [
   {
@@ -252,8 +253,7 @@ function drawGrid(ctx, plot, yBounds, ticks, drawXTicks) {
   ctx.strokeStyle = "rgba(17, 24, 39, 0.08)";
   ctx.lineWidth = 1;
 
-  const xTicks = [0.01, 0.05, 0.10, 0.15, 0.20];
-  for (const tick of xTicks) {
+  for (const tick of X_TICKS) {
     const x = scaleX(tick, plot, chartBounds);
     ctx.beginPath();
     ctx.moveTo(x, plot.y);
@@ -271,7 +271,7 @@ function drawGrid(ctx, plot, yBounds, ticks, drawXTicks) {
 
   if (drawXTicks) {
     ctx.strokeStyle = "rgba(17, 24, 39, 0.12)";
-    for (const tick of xTicks) {
+    for (const tick of X_TICKS) {
       const x = scaleX(tick, plot, chartBounds);
       ctx.beginPath();
       ctx.moveTo(x, plot.y + plot.height);
@@ -306,8 +306,7 @@ function drawAxes(ctx, plot, yBounds, ticks, includeXLabels, yLabel, xLabel = ""
   }
 
   if (includeXLabels) {
-    const xTicks = [0.01, 0.05, 0.10, 0.15, 0.20];
-    for (const tick of xTicks) {
+    for (const tick of X_TICKS) {
       const x = scaleX(tick, plot, chartBounds);
       ctx.fillText(`${(tick * 100).toFixed(0)}%`, x - 12, plot.y + plot.height + 22);
     }
@@ -613,7 +612,7 @@ function lineStyleForLegend(formula) {
 }
 
 function sliderValueToRate(sliderValue) {
-  return sliderValue / 1000;
+  return sliderValue / 10000;
 }
 
 function sliderPercent(sliderValue) {
@@ -631,11 +630,11 @@ function scaleY(value, plot, yBounds) {
 }
 
 function formatDecimal(rate) {
-  return rate.toFixed(3);
+  return rate.toFixed(4);
 }
 
 function formatPercent(rate) {
-  return `${(rate * 100).toFixed(1)}%`;
+  return `${(rate * 100).toFixed(4)}%`;
 }
 
 function formatTickLabel(value, bounds) {
