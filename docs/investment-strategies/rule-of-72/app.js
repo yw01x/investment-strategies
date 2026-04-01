@@ -81,6 +81,7 @@ const state = {
 
 const canvas = document.getElementById("chartCanvas");
 const slider = document.getElementById("rateSlider");
+const rateInput = document.getElementById("rateInput");
 const rateOutput = document.getElementById("rateOutput");
 const formulaCards = document.getElementById("formulaCards");
 const legendList = document.getElementById("legendList");
@@ -103,8 +104,24 @@ renderLegend();
 updateAll();
 
 slider.addEventListener("input", () => {
-  state.sliderValue = Number(slider.value);
-  updateAll();
+  setSliderValue(Number(slider.value));
+});
+
+rateInput.addEventListener("input", () => {
+  if (rateInput.value === "") {
+    return;
+  }
+
+  const parsedValue = Number(rateInput.value);
+  if (!Number.isFinite(parsedValue)) {
+    return;
+  }
+
+  setRate(parsedValue);
+});
+
+rateInput.addEventListener("blur", () => {
+  rateInput.value = formatDecimal(sliderValueToRate(state.sliderValue));
 });
 
 downloadButton.addEventListener("click", () => {
@@ -121,6 +138,8 @@ function updateAll() {
   const values = calculateValues(rate);
   const errors = calculateErrors(values);
 
+  slider.value = String(state.sliderValue);
+  rateInput.value = formatDecimal(rate);
   rateOutput.textContent = `r = ${formatDecimal(rate)} (${formatPercent(rate)})`;
   slider.style.setProperty("--fill-percent", `${sliderPercent(state.sliderValue).toFixed(2)}%`);
   renderFormulaCards(values, errors);
@@ -613,6 +632,23 @@ function lineStyleForLegend(formula) {
 
 function sliderValueToRate(sliderValue) {
   return sliderValue / 10000;
+}
+
+function rateToSliderValue(rate) {
+  return Math.round(rate * 10000);
+}
+
+function setSliderValue(sliderValue) {
+  state.sliderValue = clampSliderValue(sliderValue);
+  updateAll();
+}
+
+function setRate(rate) {
+  setSliderValue(rateToSliderValue(rate));
+}
+
+function clampSliderValue(sliderValue) {
+  return Math.min(MAX_SLIDER_VALUE, Math.max(MIN_SLIDER_VALUE, Math.round(sliderValue)));
 }
 
 function sliderPercent(sliderValue) {

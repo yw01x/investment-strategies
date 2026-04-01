@@ -378,6 +378,62 @@ h2 {
   font-size: var(--font-medium);
 }
 
+.rate-input-row {
+  margin-top: 18px;
+}
+
+.manual-rate-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.manual-rate-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(193, 201, 214, 0.82);
+  box-shadow: var(--surface-shadow-soft);
+}
+
+.manual-rate-input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--accent);
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.manual-rate-input::-webkit-outer-spin-button,
+.manual-rate-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.manual-rate-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.manual-rate-unit {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .rate-note {
   margin-top: 22px;
   padding-top: 16px;
@@ -528,5 +584,10 @@ h2 {
   .formula-metric {
     text-align: left;
     min-width: 0;
+  }
+
+  .manual-rate-wrap {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
