@@ -7,7 +7,7 @@
 - **Q1(k)** In my Sharpe-style replication, volatility and pairwise correlations are substantially more stable across subperiods than mean returns. The estimated frontier also overstates realized performance, especially in the aggressive high-return region.
 - **Q2** I do not agree that the optimal hedge ratio is generally $-\beta_Y/\beta_X$. The correct variance-minimizing hedge ratio is $\beta^\ast = -\frac{\beta_Y \beta_X \sigma_M^2}{\beta_X^2 \sigma_M^2 + \sigma_X^2}$, and the Monte Carlo experiment confirms this result.
 
-Supporting exhibits are provided as Appendix A through Appendix G:
+Supporting exhibits are provided as Appendix A through Appendix I:
 - Appendix A: Summary Metrics
 - Appendix B: Q1(b) AMZN Return Example
 - Appendix C: Q1(b)/(e) Parameter Summary
@@ -43,6 +43,8 @@ References：
 - The optimization universe therefore contains 49 stocks.
 - I use 252 trading days to annualize returns and volatility.
 - The Sharpe ratio is reported without subtracting a risk-free rate.
+- The reported figures were implemented in Python and cross-checked against spreadsheet calculations where applicable.
+- The main implementation is organized across four scripts: `download_hw4_q1a_data.py` for Tiingo data collection, `hw4_data_source_comparison.py` for the Tiingo-versus-Yahoo checks in Q1(a), `hw4_analysis.py` for the portfolio, hedge, Sharpe-style, and Monte Carlo calculations, and `generate_hw4_figures.py` for the figures shown below.
 
 
 
@@ -60,6 +62,8 @@ References：
 
 > Another reason for choosing Tiingo is that it provides adjusted price fields and corporate-action information, which helps ensure that stock splits and dividend distributions are handled consistently across the sample.
 
+The Tiingo download and validation workflow is implemented in `download_hw4_q1a_data.py`, and the Tiingo-versus-Yahoo comparison discussed above is implemented in `hw4_data_source_comparison.py`. Appendix H.1 shows the representative download logic.
+
 For the remainder of the assignment, I retain GEHC in the downloaded raw dataset for completeness, but exclude it from the portfolio estimation, optimization, and Sharpe-style replication because it does not have a full estimation window.
 
 **(b) Use the first three of the data in your dataset to estimate the necessary parameters for the Markowitz mean-variance portfolio construction framework (for the 50 stocks) in the value portfolio) we discussed in class.**
@@ -69,6 +73,8 @@ I use the first three years of the dataset as the estimation window for the Mark
 I compute daily stock returns using adjusted closing prices. Let $P_{i,t}$ denote the adjusted closing price of stock $i$ on day $t$. Then the daily return for stock $i$ is calculated as $r_{i,t} = \frac{P_{i,t}}{P_{i,t-1}} - 1$. I use simple daily returns rather than log returns. I use adjusted prices rather than raw closing prices so that stock splits and dividend-related adjustments are handled consistently across securities.
 
 Using these daily returns, I estimate the expected return vector and the covariance matrix required for the Markowitz framework. For each stock $i$, the sample mean return is $\hat{\mu}_i = \frac{1}{T}\sum_{t=1}^{T} r_{i,t}$, where $T$ is the number of trading days in the estimation window. Collecting these sample means across all stocks gives the estimated expected return vector $\hat{\mu}$. I then estimate the covariance matrix $\hat{\Sigma}$ using the sample covariance formula $\hat{\Sigma}_{ij} = \frac{1}{T-1}\sum_{t=1}^{T}(r_{i,t}-\hat{\mu}_i)(r_{j,t}-\hat{\mu}_j)$ for each pair of stocks $i$ and $j$. These two objects, $\hat{\mu}$ and $\hat{\Sigma}$, are the necessary inputs for the portfolio optimization in part (c).
+
+The core return-construction and parameter-estimation workflow is implemented in `hw4_analysis.py`; representative snippets are shown in Appendix H.2 and Appendix H.3.
 
 For illustration, consider Amazon (AMZN). Its adjusted closing price was $108.44350$ on April 13, 2020 and $114.16600$ on April 14, 2020. Therefore, the daily return on April 14, 2020 is calculated as $r_t = \frac{114.16600}{108.44350} - 1 = 0.052767$, or about $5.27670\%$. On April 15, 2020, the adjusted closing price was $115.38400$, so the next daily return is $r_{t+1} = \frac{115.38400}{114.16600} - 1 = 0.010669$, or about $1.06690\%$. Repeating this calculation over the full estimation window gives the return series for AMZN, and the same procedure is then applied to all other stocks in the portfolio.
 
@@ -80,12 +86,48 @@ Table 1 below gives the concrete adjusted-price return example used in part (b).
 | 2020-04-14 | 114.16600 | 0.05276941 |
 | 2020-04-15 | 115.38400 | 0.01066868 |
 
+The corresponding implementation uses the adjusted-close series directly and converts it to simple returns with a one-period percentage change:
+
+```python
+def load_adj_returns(prices_dir, ticker):
+    out = {}
+    prev = None
+    with open(prices_dir / f"{ticker}.csv", newline="") as f:
+        for row in csv.DictReader(f):
+            adj = float(row["adjClose"])
+            if prev is not None:
+                out[row["date"]] = adj / prev - 1.0
+            prev = adj
+    return out
+```
+
 Table 2 summarizes the estimation inputs for parts (b) and (e). The same information is provided in Appendix C.
 
 | Window | Return Start | Return End | Stocks Used | Observations | Mean Vector Size | Covariance Matrix Size |
 | --- | --- | --- | ---: | ---: | --- | --- |
 | First 3 Years | 2020-04-14 | 2023-04-12 | 49 | 755 | 49x1 | 49x49 |
 | Last 3 Years | 2023-04-13 | 2026-04-10 | 49 | 751 | 49x1 | 49x49 |
+
+The mean vector and covariance matrix are estimated directly from the first-window return matrix:
+
+```python
+r1 = [[rets[ticker][d] for ticker in STOCKS] for d in first_dates]
+mu1 = means(r1)
+sigma1 = cov_matrix(r1, mu1)
+
+def means(rows):
+    return [sum(row[j] for row in rows) / len(rows) for j in range(len(rows[0]))]
+
+def cov_matrix(rows, mu):
+    n = len(mu)
+    out = [[0.0] * n for _ in range(n)]
+    for row in rows:
+        d = [row[j] - mu[j] for j in range(n)]
+        for i in range(n):
+            for j in range(i, n):
+                out[i][j] += d[i] * d[j]
+    return [[out[i][j] / (len(rows) - 1) for j in range(n)] for i in range(n)]
+```
 
 **(c) Use the parameters you estimated to construct the Markowitz optimal portfolio (of the 50 stocks) with the constraints we adopted in class of full investment, no leverage, and long-only positions) at the end of the first three years.**
 
@@ -116,6 +158,34 @@ $$
 These constraints correspond to the conditions imposed in class. The condition $\sum_{i=1}^{N} w_i = 1$ enforces full investment, while $w_i \ge 0$ imposes long-only positions. Together, these constraints also imply no leverage. Under these constraints, the solution is the global minimum-variance portfolio.
 
 In practice, the calculation proceeds as follows. First, I take the estimated daily covariance matrix $\hat{\Sigma}$ from part (b). Second, I define the decision variables as the portfolio weights $w_1, \dots, w_N$. Third, I use an optimizer to minimize $w^\top \hat{\Sigma} w$ subject to the portfolio constraints above. The solution gives the global minimum-variance portfolio weights at the end of the first three years. These weights are then carried forward into part (d), where I evaluate the portfolio’s out-of-sample performance over the remaining three years.
+
+The GMV optimization used in parts (c) and (f) is implemented in `hw4_analysis.py`; the core optimization snippet is shown in Appendix H.4.
+
+The optimization itself is a long-only quadratic minimum-variance solve over the simplex:
+
+```python
+def solve_gmv(sigma, iters=100000, tol=1e-14):
+    n = len(sigma)
+    w = [1.0 / n] * n
+    step = 1.0 / max(2.0 * dominant_eigenvalue(sigma), 1e-12)
+    for _ in range(iters):
+        grad = [2.0 * g for g in matvec(sigma, w)]
+        nw = proj_simplex([w[i] - step * grad[i] for i in range(n)])
+        if norm2([nw[i] - w[i] for i in range(n)]) < tol:
+            return nw
+        w = nw
+    return w
+```
+
+Table 3A reports the in-sample characteristics of the part (c) global minimum-variance portfolio, using the first-window returns and the weights in Table 3.
+
+| Metric | Value |
+| --- | ---: |
+| Daily Mean Return | 0.00055296 |
+| Daily Volatility | 0.00823706 |
+| Annualized Return | 13.93449% |
+| Annualized Volatility | 13.07592% |
+| Sharpe Ratio | 1.06566 |
 
 Table 3 reports the nonzero weights in the portfolio from part (c), sorted from largest to smallest. The full supporting exhibit is provided as Appendix D.
 
@@ -179,6 +249,20 @@ $$
 I also compute the portfolio’s maximum drawdown, which captures the largest peak-to-trough decline in cumulative portfolio value during the out-of-sample period. Together, these measures allow me to evaluate not only how much the portfolio earned, but also how much risk and downside volatility it experienced while doing so.
 
 This out-of-sample evaluation is important because it provides a more realistic test of the portfolio construction framework. The portfolio in part (c) was built using only the first three years of data, so its performance in the last three years indicates how well that strategy holds up on data that were not used in model estimation or portfolio selection.
+
+The out-of-sample return construction and metric calculations for parts (d) and (g) are implemented in `hw4_analysis.py`; Appendix H.5 shows the main snippet.
+
+The main out-of-sample evaluation applies fixed weights to the later-window return matrix and then computes the annualized summary metrics:
+
+```python
+rp_second = portfolio_returns(r2, w1)
+metrics_d = metrics(rp_second)
+rg = portfolio_returns(r1, w2)
+metrics_g = metrics(rg)
+
+def portfolio_returns(rows, weights):
+    return [sum(row[j] * weights[j] for j in range(len(weights))) for row in rows]
+```
 
 Using the last three years of the sample, the portfolio’s out-of-sample performance is as follows:
 
@@ -367,6 +451,21 @@ $$
 
 These hedge ratios indicate how much of SPY or VOO should be added to the portfolio from part (c) in order to minimize the variance of the hedged position over the first three years of the sample. In part (j), I then evaluate the out-of-sample effectiveness of these two hedges over the last three years of the dataset.
 
+The hedge-ratio calculations and hedged return series in parts (i) and (j) are implemented in `hw4_analysis.py`; see Appendix H.6 for the main code fragment.
+
+The hedge computation follows the covariance-over-variance formula and then applies the fixed hedge ratios to the second-window ETF returns:
+
+```python
+beta_spy = -covariance(rp_first, spy_first) / variance(spy_first)
+beta_voo = -covariance(rp_first, voo_first) / variance(voo_first)
+
+hedged_spy = [rp_second[i] + beta_spy * spy_second[i] for i in range(len(rp_second))]
+hedged_voo = [rp_second[i] + beta_voo * voo_second[i] for i in range(len(rp_second))]
+
+metrics_spy = metrics(hedged_spy)
+metrics_voo = metrics(hedged_voo)
+```
+
 **(j) Evaluate the effectiveness of the hedges you calculated in step (i) on the out-of-sample data of the last three years in your dataset (for the meaning of “evaluate” please see step (d) above).**
 
 For part (j), I evaluate the out-of-sample effectiveness of the two hedges obtained in part (i) over the last three years of the dataset. Let $r_{p,t}$ denote the return on the portfolio from part (c), and let $\beta_{SPY}^{\ast}$ and $\beta_{VOO}^{\ast}$ denote the variance-minimizing hedge ratios estimated from the first three years. The daily returns on the two hedged portfolios in the last three years are therefore
@@ -416,6 +515,21 @@ Next, I reproduce the efficient-frontier part of the Sharpe analysis. Using the 
 A few concrete examples make this clear. For a minimum-variance-type portfolio, the first-period estimate is an annualized return of 13.94945% with annualized volatility of 13.07593%, while the realized second-period outcome is very similar: 13.85080% return with 12.30053% volatility. In contrast, for the most aggressive estimated-frontier portfolio, the first-period estimate is 82.20958% annualized return with 58.87819% annualized volatility, but the realized second-period outcome is only 4.26820% annualized return with 33.48289% volatility. So the “disappointment factor” in my replication comes primarily from very poor return forecasting in the high-return region.
 
 My findings are broadly consistent with the Sharpe study discussed in class. Like Sharpe, I find that volatility and correlation are substantially more stable than mean returns, and that optimized portfolios become much less reliable as one moves away from the minimum-risk region of the frontier. The main difference is that in my sample the second three-year period is generally less volatile than the first, so realized volatility is often lower rather than higher. As a result, the disappointment in my replication comes mostly from overestimated returns, not from a surge in realized risk. On their own merit, these findings suggest that the Markowitz framework is most useful when used conservatively, especially for lower-risk allocations, while aggressive return-seeking optimizations should be treated with great caution because they are highly sensitive to estimation error.
+
+The stability metrics and frontier diagnostics in part (k) are implemented in `hw4_analysis.py`, while the figures are produced by `generate_hw4_figures.py`; the main diagnostics snippet is shown in Appendix H.7.
+
+The key diagnostics compare stability across subperiods and then summarize the estimated-minus-realized frontier gap:
+
+```python
+vol1 = annualized_vols(r1)
+vol2 = annualized_vols(r2)
+mean1 = [252.0 * x for x in mu1]
+mean2 = [252.0 * x for x in mu2]
+frontier = frontier_diagnostics(mu1, sigma1, mu2, sigma2)
+
+stability_rows = [corr(vol1, vol2), corr(pairwise_corrs(r1), pairwise_corrs(r2)), corr(mean1, mean2)]
+frontier_rows = [frontier["avg_gap"], frontier["low_gap"], frontier["high_gap"]]
+```
 
 Table 6 gives a compact summary of the Sharpe-style replication results. The supporting exhibit is provided as Appendix G.
 
@@ -508,6 +622,37 @@ $$
 To make the comparison concrete, I use the parameter values $\mu_M = 0.00050$, $\sigma_M = 0.02000$, $\beta_X = 0.80000$, $\beta_Y = 1.20000$, $\sigma_X = 0.03000$, and $\sigma_Y = 0.01500$. Under these values, the investor’s proposed hedge ratio is $-1.50000$, while the correct variance-minimizing hedge ratio is approximately $-0.33218$. In the simulation, the sample variance of the unhedged portfolio is 0.00080290, the variance under the proposed hedge ratio is 0.00225080, and the variance under the correct hedge ratio is 0.00067604. Thus, the proposed hedge ratio actually increases variance substantially, while the correct hedge ratio lowers variance.
 
 This empirical exercise confirms the algebraic result. The hedge ratio $-\beta_Y/\beta_X$ would only be correct if asset $X$ had no idiosyncratic risk. In the general case, because $R_X$ contains both market risk and its own independent residual risk, the variance-minimizing hedge ratio must account for the total variance of $X$, not just its market beta.
+
+The Monte Carlo verification for Question 2 is implemented in `hw4_analysis.py`; the representative code is shown in Appendix H.8.
+
+The simulation draws the market and idiosyncratic shocks directly, then compares the sample variance under the claimed hedge ratio and the true optimum:
+
+```python
+q2 = monte_carlo_q2()
+
+def monte_carlo_q2(draws=100000, seed=0):
+    r_x, r_y = [], []
+    for _ in range(draws):
+        r_m = rng.gauss(mu_M, sigma_M)
+        eps_x = rng.gauss(0.0, sigma_X)
+        eps_y = rng.gauss(0.0, sigma_Y)
+        r_x.append(beta_X * r_m + eps_x)
+        r_y.append(beta_Y * r_m + eps_y)
+    return {
+        "var_claim": variance([r_y[i] + beta_claim * r_x[i] for i in range(draws)]),
+        "var_star": variance([r_y[i] + beta_star * r_x[i] for i in range(draws)]),
+    }
+```
+
+Table 7 summarizes the Monte Carlo comparison for Question 2.
+
+| Quantity | Value |
+| --- | ---: |
+| Claimed Hedge Ratio | -1.50000 |
+| Optimal Hedge Ratio | -0.33218 |
+| Unhedged Variance | 0.00079793 |
+| Variance at Claimed Ratio | 0.00226411 |
+| Variance at Optimal Ratio | 0.00067112 |
 
 ## Appendix H. Selected Code Snippets
 
@@ -843,8 +988,6 @@ Table I2 reports the hedge-ratio details in full decimal form, including the var
 | --- | ---: | ---: |
 | SPY | -0.48221720 | 14.12506% |
 | VOO | -0.48296659 | 14.53566% |
-
-
 
 
 
