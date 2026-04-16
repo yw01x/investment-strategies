@@ -494,7 +494,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Rebuild HW4 calculation exhibits from Tiingo price CSVs.")
     parser.add_argument(
         "--prices-dir",
-        default=str(base / "q1a_data" / "prices"),
+        default=str(base / "data" / "tiingo_prices"),
         help="Directory containing per-ticker Tiingo CSV files.",
     )
     parser.add_argument(

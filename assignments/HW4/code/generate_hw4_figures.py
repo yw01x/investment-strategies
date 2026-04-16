@@ -216,7 +216,7 @@ def draw_dual_bar_chart(title, left_title, left_rows, right_title, right_rows, p
 def main():
     FIGURES.mkdir(parents=True, exist_ok=True)
 
-    result = build_analysis(BASE / "q1a_data" / "prices")
+    result = build_analysis(BASE / "data" / "tiingo_prices")
     r1 = result["r1"]
     r2 = result["r2"]
     w1 = result["w1"]

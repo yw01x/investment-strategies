@@ -2,14 +2,14 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-PRICES_DIR="${1:-$ROOT/q1a_data/prices}"
-YAHOO_WORKBOOK="${2:-}"
+PRICES_DIR="${1:-$ROOT/data/tiingo_prices}"
+YAHOO_WORKBOOK="${2:-$ROOT/data/yahoo/52_Securities_Daily_Close_Yahoo_Finance.xlsx}"
 
 python3 "$ROOT/code/hw4_analysis.py" \
   --prices-dir "$PRICES_DIR" \
   --exhibits-dir "$ROOT/exhibits"
 
-if [[ -n "$YAHOO_WORKBOOK" ]]; then
+if [[ -n "$YAHOO_WORKBOOK" && -f "$YAHOO_WORKBOOK" ]]; then
   python3 "$ROOT/code/hw4_data_source_comparison.py" \
     --yahoo-workbook "$YAHOO_WORKBOOK" \
     --prices-dir "$PRICES_DIR" \

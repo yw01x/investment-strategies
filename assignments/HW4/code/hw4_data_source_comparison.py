@@ -105,12 +105,12 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Compare Yahoo split-adjusted workbook data against Tiingo prices.")
     parser.add_argument(
         "--yahoo-workbook",
-        required=True,
+        default=str(base / "data" / "yahoo" / "52_Securities_Daily_Close_Yahoo_Finance.xlsx"),
         help="Path to the Yahoo Finance workbook used for comparison.",
     )
     parser.add_argument(
         "--prices-dir",
-        default=str(base / "q1a_data" / "prices"),
+        default=str(base / "data" / "tiingo_prices"),
         help="Directory containing Tiingo per-ticker CSV files.",
     )
     parser.add_argument(
