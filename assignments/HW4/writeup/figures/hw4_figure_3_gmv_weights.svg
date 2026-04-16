@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="860" viewBox="0 0 1300 860">
+<rect x="0" y="0" width="1300" height="860" fill="#ffffff"/>
+<text x="60" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#243040" text-anchor="start">Figure 3. GMV Portfolio Weights</text>
+<text x="60" y="72" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Nonzero weights only; weights sorted from largest to smallest.</text>
+<text x="60" y="108" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#243040" text-anchor="start">Q1(c) First-Window GMV</text>
+<text x="60" y="148.55555555555554" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">JNJ</text>
+<rect x="132" y="124.0" width="340.0" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="480.0" y="148.55555555555554" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.2734</text>
+<text x="60" y="186.33333333333331" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">PEP</text>
+<rect x="132" y="161.77777777777777" width="210.61967598082148" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="350.6196759808215" y="186.33333333333331" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.1694</text>
+<text x="60" y="224.1111111111111" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">BMY</text>
+<rect x="132" y="199.55555555555554" width="160.84888419207687" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="300.84888419207687" y="224.1111111111111" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.1293</text>
+<text x="60" y="261.8888888888889" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">CALM</text>
+<rect x="132" y="237.33333333333334" width="143.92978331641822" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="283.92978331641825" y="261.8888888888889" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.1157</text>
+<text x="60" y="299.66666666666663" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">NEM</text>
+<rect x="132" y="275.1111111111111" width="69.20219836378197" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="209.20219836378197" y="299.66666666666663" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0556</text>
+<text x="60" y="337.44444444444446" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">MRK</text>
+<rect x="132" y="312.8888888888889" width="57.15646228447919" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="197.15646228447918" y="337.44444444444446" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0460</text>
+<text x="60" y="375.22222222222223" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">RNR</text>
+<rect x="132" y="350.6666666666667" width="46.448959948078894" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="186.44895994807888" y="375.22222222222223" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0373</text>
+<text x="60" y="413.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">TSM</text>
+<rect x="132" y="388.44444444444446" width="37.62099998050525" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="177.62099998050525" y="413.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0303</text>
+<text x="60" y="450.77777777777777" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">INCY</text>
+<rect x="132" y="426.22222222222223" width="36.516111068083156" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="176.51611106808315" y="450.77777777777777" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0294</text>
+<text x="60" y="488.55555555555554" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">ORCL</text>
+<rect x="132" y="464.0" width="35.101318313093444" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="175.10131831309343" y="488.55555555555554" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0282</text>
+<text x="60" y="526.3333333333334" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">GNTX</text>
+<rect x="132" y="501.77777777777777" width="27.73286319538522" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="167.73286319538522" y="526.3333333333334" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0223</text>
+<text x="60" y="564.1111111111111" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">UPS</text>
+<rect x="132" y="539.5555555555555" width="25.73752127470339" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="165.7375212747034" y="564.1111111111111" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0207</text>
+<text x="60" y="601.8888888888889" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">CF</text>
+<rect x="132" y="577.3333333333334" width="15.842542494165667" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="155.84254249416566" y="601.8888888888889" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0127</text>
+<text x="60" y="639.6666666666666" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">PFE</text>
+<rect x="132" y="615.1111111111111" width="12.28018972172866" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="152.28018972172868" y="639.6666666666666" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0099</text>
+<text x="60" y="677.4444444444445" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">AMGN</text>
+<rect x="132" y="652.8888888888889" width="7.907734167414512" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="147.9077341674145" y="677.4444444444445" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0064</text>
+<text x="60" y="715.2222222222222" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">HRB</text>
+<rect x="132" y="690.6666666666666" width="6.431380579350473" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="146.43138057935047" y="715.2222222222222" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0052</text>
+<text x="60" y="753.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">ARLP</text>
+<rect x="132" y="728.4444444444445" width="5.580241866282633" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="145.58024186628262" y="753.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0045</text>
+<text x="60" y="790.7777777777778" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">NFLX</text>
+<rect x="132" y="766.2222222222223" width="4.712070547233785" height="26.444444444444443" fill="#1756a9" stroke="none" rx="2"/>
+<text x="144.7120705472338" y="790.7777777777778" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0038</text>
+<text x="700" y="108" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#243040" text-anchor="start">Q1(f) Second-Window GMV</text>
+<text x="700" y="141.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">JNJ</text>
+<rect x="772" y="124.0" width="340.0" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="1120.0" y="141.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.2047</text>
+<text x="700" y="167.15384615384616" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">PEP</text>
+<rect x="772" y="150.15384615384616" width="232.68694303043142" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="1012.6869430304314" y="167.15384615384616" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.1401</text>
+<text x="700" y="193.30769230769232" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">MSFT</text>
+<rect x="772" y="176.30769230769232" width="177.63246472029815" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="957.6324647202981" y="193.30769230769232" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.1070</text>
+<text x="700" y="219.46153846153845" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">ARLP</text>
+<rect x="772" y="202.46153846153845" width="170.34579460034797" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="950.345794600348" y="219.46153846153845" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.1026</text>
+<text x="700" y="245.6153846153846" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">MCK</text>
+<rect x="772" y="228.6153846153846" width="121.66920373275642" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="901.6692037327564" y="245.6153846153846" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0733</text>
+<text x="700" y="271.7692307692308" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">HRB</text>
+<rect x="772" y="254.76923076923077" width="71.81884718155268" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="851.8188471815527" y="271.7692307692308" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0432</text>
+<text x="700" y="297.9230769230769" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">GOOG</text>
+<rect x="772" y="280.9230769230769" width="62.21715044364905" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="842.2171504436491" y="297.9230769230769" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0375</text>
+<text x="700" y="324.0769230769231" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">EOG</text>
+<rect x="772" y="307.0769230769231" width="57.51006408376977" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="837.5100640837697" y="324.0769230769231" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0346</text>
+<text x="700" y="350.2307692307692" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">RNR</text>
+<rect x="772" y="333.2307692307692" width="56.240349844396555" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="836.2403498443965" y="350.2307692307692" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0339</text>
+<text x="700" y="376.38461538461536" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">NFLX</text>
+<rect x="772" y="359.38461538461536" width="50.74850116076698" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="830.748501160767" y="376.38461538461536" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0306</text>
+<text x="700" y="402.53846153846155" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">CF</text>
+<rect x="772" y="385.53846153846155" width="49.22801749141971" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="829.2280174914197" y="402.53846153846155" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0296</text>
+<text x="700" y="428.6923076923077" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">CALM</text>
+<rect x="772" y="411.6923076923077" width="45.85159317860224" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="825.8515931786022" y="428.6923076923077" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0276</text>
+<text x="700" y="454.8461538461538" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">GNTX</text>
+<rect x="772" y="437.8461538461538" width="45.122242924055165" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="825.1222429240552" y="454.8461538461538" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0272</text>
+<text x="700" y="481.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">EXEL</text>
+<rect x="772" y="464.0" width="29.639474016806204" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="809.6394740168062" y="481.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0178</text>
+<text x="700" y="507.15384615384613" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">YELP</text>
+<rect x="772" y="490.15384615384613" width="28.352048238498842" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="808.3520482384988" y="507.15384615384613" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0171</text>
+<text x="700" y="533.3076923076924" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">HCA</text>
+<rect x="772" y="516.3076923076924" width="22.876010214458443" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="802.8760102144585" y="533.3076923076924" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0138</text>
+<text x="700" y="559.4615384615385" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">LLY</text>
+<rect x="772" y="542.4615384615385" width="18.024723545861946" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="798.0247235458619" y="559.4615384615385" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0109</text>
+<text x="700" y="585.6153846153845" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">CAH</text>
+<rect x="772" y="568.6153846153845" width="16.908861161371533" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="796.9088611613715" y="585.6153846153845" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0102</text>
+<text x="700" y="611.7692307692307" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">TSM</text>
+<rect x="772" y="594.7692307692307" width="12.324598307838038" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="792.3245983078381" y="611.7692307692307" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0074</text>
+<text x="700" y="637.9230769230769" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">NVDA</text>
+<rect x="772" y="620.9230769230769" width="10.365778038295357" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="790.3657780382954" y="637.9230769230769" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0062</text>
+<text x="700" y="664.0769230769231" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">CGAU</text>
+<rect x="772" y="647.0769230769231" width="9.474493702005354" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="789.4744937020054" y="664.0769230769231" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0057</text>
+<text x="700" y="690.2307692307692" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">INCY</text>
+<rect x="772" y="673.2307692307692" width="8.883218246905951" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="788.8832182469059" y="690.2307692307692" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0053</text>
+<text x="700" y="716.3846153846154" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">MRK</text>
+<rect x="772" y="699.3846153846154" width="7.951965425671079" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="787.9519654256711" y="716.3846153846154" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0048</text>
+<text x="700" y="742.5384615384615" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">NEM</text>
+<rect x="772" y="725.5384615384615" width="7.628918188839393" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="787.6289181888394" y="742.5384615384615" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0046</text>
+<text x="700" y="768.6923076923076" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">ANF</text>
+<rect x="772" y="751.6923076923076" width="4.878489396703198" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="784.8784893967032" y="768.6923076923076" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0029</text>
+<text x="700" y="794.8461538461538" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">PFE</text>
+<rect x="772" y="777.8461538461538" width="2.3202259277467676" height="18.307692307692307" fill="#2d8f5b" stroke="none" rx="2"/>
+<text x="782.3202259277467" y="794.8461538461538" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">0.0014</text>
+</svg>

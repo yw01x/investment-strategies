@@ -1,0 +1,59 @@
+.print-header {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 0.9in 0.7in 0.7in 0.7in;
+  }
+
+  body {
+    margin: 0 auto;
+    padding-top: 0.58in !important;
+  }
+
+  .print-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.08in 0 0.12in 0;
+    border-bottom: 1px solid #999;
+    background: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10pt;
+    color: #222;
+    z-index: 9999;
+  }
+
+  .print-header__title,
+  .print-header__name {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .figure-block {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin: 0.18in 0 0.16in 0;
+  }
+
+  .figure-block img {
+    display: block;
+    width: 100%;
+    max-height: 3.6in;
+    object-fit: contain;
+    margin: 0.08in auto 0 auto;
+  }
+
+  .figure-note {
+    margin: 0 0 0.06in 0;
+  }
+
+  p, ul, ol, table {
+    break-inside: auto;
+  }
+}

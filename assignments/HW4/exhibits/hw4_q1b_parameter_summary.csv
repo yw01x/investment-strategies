@@ -1,0 +1,3 @@
+Window,Return Start,Return End,Stocks Used,Observations,Mean Vector Size,Covariance Matrix Size
+First 3 Years,2020-04-14,2023-04-12,49,755,49x1,49x49
+Last 3 Years,2023-04-13,2026-04-10,49,751,49x1,49x49

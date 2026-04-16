@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="760" viewBox="0 0 1300 760">
+<rect x="0" y="0" width="1300" height="760" fill="#ffffff"/>
+<text x="60" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#243040" text-anchor="start">Figure 4. Sharpe-Style Replication Summary</text>
+<text x="60" y="72" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Compact summary of stability and estimated-versus-realized disappointment.</text>
+<text x="60" y="108" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#243040" text-anchor="start">Stability Across Subperiods</text>
+<rect x="80.0" y="208.28245558798233" width="96.0" height="431.7175444120177" fill="#1756a9" stroke="none" rx="2"/>
+<text x="128.0" y="200.28245558798233" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">0.59402</text>
+<text x="128.0" y="660" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="middle">Vol</text>
+<rect x="240.0" y="120.0" width="96.0" height="520.0" fill="#1756a9" stroke="none" rx="2"/>
+<text x="288.0" y="112.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">0.71549</text>
+<text x="288.0" y="660" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="middle">Pair Corr</text>
+<rect x="400.0" y="559.5616428012127" width="96.0" height="80.43835719878734" fill="#1756a9" stroke="none" rx="2"/>
+<text x="448.0" y="551.5616428012127" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">0.11068</text>
+<text x="448.0" y="660" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="middle">Mean</text>
+<line x1="60" y1="640" x2="580" y2="640" stroke="#5f6975" stroke-width="1.5"/>
+<text x="700" y="108" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#243040" text-anchor="start">Estimated-minus-Realized Frontier Gaps</text>
+<rect x="720.0" y="363.0597022645686" width="96.0" height="276.9402977354314" fill="#c9791a" stroke="none" rx="2"/>
+<text x="768.0" y="355.0597022645686" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">0.06692</text>
+<text x="768.0" y="660" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="middle">Avg Gap</text>
+<rect x="880.0" y="630.4252919938342" width="96.0" height="9.574708006165752" fill="#c9791a" stroke="none" rx="2"/>
+<text x="928.0" y="622.4252919938342" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">0.00231</text>
+<text x="928.0" y="660" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="middle">Low-Risk</text>
+<rect x="1040.0" y="120.0" width="96.0" height="520.0" fill="#c9791a" stroke="none" rx="2"/>
+<text x="1088.0" y="112.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">0.12566</text>
+<text x="1088.0" y="660" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="middle">High-Risk</text>
+<line x1="700" y1="640" x2="1220" y2="640" stroke="#5f6975" stroke-width="1.5"/>
+</svg>

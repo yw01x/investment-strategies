@@ -1,0 +1,15 @@
+Item,Value
+Primary data source,Tiingo
+Q1(d) cumulative return,0.47718621
+Q1(d) annualized return,0.13849989
+Q1(d) annualized volatility,0.12302078
+Q1(d) Sharpe ratio,1.12582517
+Q1(g) cumulative return,1.17477457
+Q1(g) annualized return,0.27366073
+Q1(g) annualized volatility,0.16860507
+Q1(g) Sharpe ratio,1.62308723
+Q1(i) SPY hedge ratio,-0.48221720
+Q1(i) VOO hedge ratio,-0.48296659
+Q1(j) SPY variance reduction,0.14125056
+Q1(j) VOO variance reduction,0.14535663
+Q2 optimal hedge ratio,-(beta_Y beta_X sigma_M^2)/(beta_X^2 sigma_M^2 + sigma_X^2)
