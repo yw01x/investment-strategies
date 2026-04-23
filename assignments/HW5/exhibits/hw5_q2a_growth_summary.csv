@@ -1,0 +1,13 @@
+Metric,Value
+Stock Count,49.00000000
+First-Period Observations,755.00000000
+Second-Period Observations,751.00000000
+Growth Pearson Correlation,0.04989366
+Growth Spearman Correlation,-0.00683673
+Same-Sign Count,32.00000000
+Average First-Period CAGR,0.22982474
+Average Second-Period CAGR,0.17568527
+Median First-Period CAGR,0.17733556
+Median Second-Period CAGR,0.14398603
+Average Absolute CAGR Change,0.26255675
+HW4 Mean-Return Stability Corr,0.11067852

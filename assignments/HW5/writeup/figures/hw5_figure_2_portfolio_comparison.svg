@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820">
+<rect x="0" y="0" width="1280" height="820" fill="#ffffff"/>
+<text x="60" y="42" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#243040" text-anchor="start">Figure 2. Equal-Weight vs. HW4 GMV Portfolio</text>
+<text x="60" y="72" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Second 3-year evaluation window. Green means &#x27;more&#x27; and orange means &#x27;more defensive / lower&#x27;.</text>
+<rect x="60" y="110" width="520" height="640" fill="#edf2f7" stroke="none" rx="18"/>
+<rect x="640" y="110" width="580" height="640" fill="#edf2f7" stroke="none" rx="18"/>
+<text x="90" y="145" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#243040" text-anchor="start">Performance</text>
+<text x="670" y="145" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#243040" text-anchor="start">Risk, Market Exposure, and Implementation</text>
+<text x="90" y="190" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#243040" text-anchor="start">Cumulative Return</text>
+<rect x="90" y="208" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="90" y="208" width="420.0" height="22" fill="#2d8f5b" stroke="none" rx="8"/>
+<rect x="90" y="244" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="90" y="244" width="267.22478079319995" height="22" fill="#c9791a" stroke="none" rx="8"/>
+<text x="524" y="224" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">EW: 0.7500</text>
+<text x="524" y="260" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">GMV: 0.4772</text>
+<text x="90" y="286" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">Preferred on this metric: Equal Weight</text>
+<text x="90" y="315" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#243040" text-anchor="start">Annualized Return</text>
+<rect x="90" y="333" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="90" y="333" width="420.0" height="22" fill="#2d8f5b" stroke="none" rx="8"/>
+<rect x="90" y="369" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="90" y="369" width="294.01626378767793" height="22" fill="#c9791a" stroke="none" rx="8"/>
+<text x="524" y="349" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">EW: 0.1978</text>
+<text x="524" y="385" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">GMV: 0.1385</text>
+<text x="90" y="411" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">Preferred on this metric: Equal Weight</text>
+<text x="90" y="440" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#243040" text-anchor="start">Sharpe Ratio</text>
+<rect x="90" y="458" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="90" y="458" width="420.00000000000006" height="22" fill="#2d8f5b" stroke="none" rx="8"/>
+<rect x="90" y="494" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="90" y="494" width="338.60987353347895" height="22" fill="#c9791a" stroke="none" rx="8"/>
+<text x="524" y="474" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">EW: 1.3964</text>
+<text x="524" y="510" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">GMV: 1.1258</text>
+<text x="90" y="536" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">Preferred on this metric: Equal Weight</text>
+<text x="90" y="565" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#243040" text-anchor="start">CAGR</text>
+<rect x="90" y="583" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="90" y="583" width="420.0" height="22" fill="#2d8f5b" stroke="none" rx="8"/>
+<rect x="90" y="619" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="90" y="619" width="284.38248380701305" height="22" fill="#c9791a" stroke="none" rx="8"/>
+<text x="524" y="599" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">EW: 0.2066</text>
+<text x="524" y="635" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">GMV: 0.1399</text>
+<text x="90" y="661" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">Preferred on this metric: Equal Weight</text>
+<text x="670" y="190" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#243040" text-anchor="start">Annualized Volatility</text>
+<rect x="670" y="208" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="208" width="420.0" height="22" fill="#2d8f5b" stroke="none" rx="8"/>
+<rect x="670" y="244" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="244" width="364.6876256212163" height="22" fill="#c9791a" stroke="none" rx="8"/>
+<text x="1104" y="224" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">EW: 0.1417</text>
+<text x="1104" y="260" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">GMV: 0.1230</text>
+<text x="670" y="286" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">Preferred on this metric: HW4 GMV</text>
+<text x="670" y="295" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#243040" text-anchor="start">Max Drawdown Magnitude</text>
+<rect x="670" y="313" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="313" width="420.0" height="22" fill="#2d8f5b" stroke="none" rx="8"/>
+<rect x="670" y="349" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="349" width="274.5660128466862" height="22" fill="#c9791a" stroke="none" rx="8"/>
+<text x="1104" y="329" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">EW: 0.1895</text>
+<text x="1104" y="365" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">GMV: 0.1239</text>
+<text x="670" y="391" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">Preferred on this metric: HW4 GMV</text>
+<text x="670" y="400" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#243040" text-anchor="start">Beta to SPY</text>
+<rect x="670" y="418" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="418" width="420.0" height="22" fill="#2d8f5b" stroke="none" rx="8"/>
+<rect x="670" y="454" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="454" width="167.27621799026733" height="22" fill="#c9791a" stroke="none" rx="8"/>
+<text x="1104" y="434" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">EW: 0.8459</text>
+<text x="1104" y="470" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">GMV: 0.3369</text>
+<text x="670" y="496" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">Preferred on this metric: HW4 GMV</text>
+<text x="670" y="505" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#243040" text-anchor="start">Annualized Turnover</text>
+<rect x="670" y="523" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="523" width="419.99999999999994" height="22" fill="#2d8f5b" stroke="none" rx="8"/>
+<rect x="670" y="559" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="559" width="0.0" height="22" fill="#c9791a" stroke="none" rx="8"/>
+<text x="1104" y="539" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">EW: 1.6195</text>
+<text x="1104" y="575" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">GMV: 0.0000</text>
+<text x="670" y="601" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">Preferred on this metric: HW4 GMV</text>
+<text x="670" y="610" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#243040" text-anchor="start">Top-5 Weight Sum</text>
+<rect x="670" y="628" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="628" width="56.493688897987695" height="22" fill="#2d8f5b" stroke="none" rx="8"/>
+<rect x="670" y="664" width="420" height="22" fill="#ffffff" stroke="#d7dde5" rx="8"/>
+<rect x="670" y="664" width="419.99999999999994" height="22" fill="#c9791a" stroke="none" rx="8"/>
+<text x="1104" y="644" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">EW: 0.1000</text>
+<text x="1104" y="680" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">GMV: 0.7434</text>
+<text x="670" y="706" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="start">Preferred on this metric: Equal Weight</text>
+<text x="90" y="722" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Green bars: daily rebalanced 50-stock equal-weight portfolio</text>
+<text x="90" y="744" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Orange bars: fixed-weight HW4 global minimum-variance portfolio</text>
+</svg>

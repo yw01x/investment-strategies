@@ -1,0 +1,11 @@
+Item,Value
+Q2(a) growth Pearson correlation,0.04989366
+Q2(a) growth Spearman correlation,-0.00683673
+Q2(a) same-sign count,32
+Q2(b) cumulative return,0.74999860
+Q2(b) annualized return,0.19784604
+Q2(b) annualized volatility,0.14167941
+Q2(b) Sharpe ratio,1.39643468
+Q2(b) max drawdown,-0.18947061
+Q2(c) equal-weight minus GMV annualized return,0.05934615
+Q2(c) equal-weight minus GMV Sharpe ratio,0.27060951
