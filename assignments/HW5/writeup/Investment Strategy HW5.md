@@ -668,7 +668,99 @@ So my bottom-line comparison is:
 
 ## Appendices
 
-Appendix A through Appendix D are supplied as separate CSV exhibit files in `exhibits/`: [`hw5_q2a_growth_rates.csv`](../exhibits/hw5_q2a_growth_rates.csv), [`hw5_q2a_growth_summary.csv`](../exhibits/hw5_q2a_growth_summary.csv), [`hw5_q2b_equal_weight_metrics.csv`](../exhibits/hw5_q2b_equal_weight_metrics.csv), and [`hw5_q2c_portfolio_comparison.csv`](../exhibits/hw5_q2c_portfolio_comparison.csv). Appendix E and Appendix F are reproduced below inside the write-up so that the most grading-relevant summary numbers and representative implementation logic are visible in one document.
+Appendix A through Appendix F are reproduced below inside the write-up so that the GitHub markdown version shows both the supporting data tables and the representative implementation logic in one place. The original exhibit files remain available in `exhibits/`.
+
+## Appendix A. Q2(a) Stock-Level Growth Rates ([`hw5_q2a_growth_rates.csv`](../exhibits/hw5_q2a_growth_rates.csv))
+
+Table A1 reproduces the full stock-level growth-rate exhibit used in Q2(a).
+
+| Ticker | FirstPeriodCAGR | SecondPeriodCAGR | Difference | SameSign |
+| --- | --- | --- | --- | --- |
+| AAPL | 0.33755159 | 0.18307777 | -0.15447382 | Yes |
+| ADBE | 0.04883661 | -0.15319378 | -0.20203040 | No |
+| ALLE | 0.03350296 | 0.14331771 | 0.10981475 | Yes |
+| AMGN | 0.07765721 | 0.15729733 | 0.07964012 | Yes |
+| AMZN | -0.03379393 | 0.34831384 | 0.38210778 | No |
+| ANF | 0.32569736 | 0.57109083 | 0.24539347 | Yes |
+| ARLP | 0.87000164 | 0.21480654 | -0.65519510 | Yes |
+| BMY | 0.09366411 | -0.01376898 | -0.10743309 | No |
+| CAH | 0.21433968 | 0.42289648 | 0.20855680 | Yes |
+| CALM | 0.14488367 | 0.17579673 | 0.03091307 | Yes |
+| CBT | 0.38700957 | 0.02153102 | -0.36547856 | Yes |
+| CF | 0.40556194 | 0.19215279 | -0.21340915 | Yes |
+| CGAU | 0.02951847 | 0.42110305 | 0.39158459 | Yes |
+| CPRX | 0.59170981 | 0.12515359 | -0.46655622 | Yes |
+| DECK | 0.47334969 | 0.12319496 | -0.35015474 | Yes |
+| DVN | 0.91456786 | -0.01339099 | -0.92795885 | No |
+| EOG | 0.49898767 | 0.07375612 | -0.42523154 | Yes |
+| EXEL | 0.03112417 | 0.31691157 | 0.28578740 | Yes |
+| GNTX | 0.07684605 | -0.05517498 | -0.13202104 | No |
+| GOOG | 0.20037670 | 0.44985577 | 0.24947907 | Yes |
+| HCA | 0.39233538 | 0.23193071 | -0.16040467 | Yes |
+| HRB | 0.39664839 | -0.01663481 | -0.41328320 | No |
+| ICLR | 0.11412898 | -0.20113201 | -0.31526100 | No |
+| INCY | -0.05648442 | 0.09183027 | 0.14831469 | No |
+| JNJ | 0.08261849 | 0.16847907 | 0.08586058 | Yes |
+| LLY | 0.38912918 | 0.37841869 | -0.01071049 | Yes |
+| MCK | 0.41599163 | 0.34538851 | -0.07060312 | Yes |
+| META | 0.06988690 | 0.44027442 | 0.37038752 | Yes |
+| MGY | 0.74465975 | 0.11983470 | -0.62482505 | Yes |
+| MRK | 0.17733556 | 0.05411756 | -0.12321800 | Yes |
+| MSFT | 0.20804951 | 0.10295063 | -0.10509889 | Yes |
+| NEM | -0.02748811 | 0.38097520 | 0.40846332 | No |
+| NFLX | -0.05863140 | 0.46363056 | 0.52226195 | No |
+| NVDA | 0.58025794 | 0.93272078 | 0.35246284 | Yes |
+| ORCL | 0.23029182 | 0.15181890 | -0.07847292 | Yes |
+| PEGA | -0.14487251 | 0.20312888 | 0.34800139 | No |
+| PEP | 0.14910197 | -0.01642419 | -0.16552616 | No |
+| PFE | 0.11489092 | -0.07984822 | -0.19473914 | No |
+| PYPL | -0.11498431 | -0.14875982 | -0.03377551 | Yes |
+| QCOM | 0.20468606 | 0.04506346 | -0.15962261 | Yes |
+| RNR | 0.09676932 | 0.14398603 | 0.04721671 | Yes |
+| SYF | 0.25491181 | 0.38216870 | 0.12725688 | Yes |
+| TROW | 0.06453240 | -0.01490406 | -0.07943645 | No |
+| TSM | 0.23698187 | 0.65125507 | 0.41427320 | Yes |
+| UBER | 0.03009171 | 0.32322366 | 0.29313196 | Yes |
+| UHS | 0.10524891 | 0.11056409 | 0.00531518 | Yes |
+| UPS | 0.28097253 | -0.14495933 | -0.42593186 | No |
+| VC | 0.43674187 | -0.13810253 | -0.57484439 | No |
+| YELP | 0.16621748 | -0.05714423 | -0.22336171 | No |
+
+## Appendix B. Q2(a) Growth-Rate Summary ([`hw5_q2a_growth_summary.csv`](../exhibits/hw5_q2a_growth_summary.csv))
+
+Table B1 reproduces the compact summary exhibit for Q2(a).
+
+| Metric | Value |
+| --- | --- |
+| Stock Count | 49.00000000 |
+| First-Period Observations | 755.00000000 |
+| Second-Period Observations | 751.00000000 |
+| Growth Pearson Correlation | 0.04989366 |
+| Growth Spearman Correlation | -0.00683673 |
+| Same-Sign Count | 32.00000000 |
+| Average First-Period CAGR | 0.22982474 |
+| Average Second-Period CAGR | 0.17568527 |
+| Median First-Period CAGR | 0.17733556 |
+| Median Second-Period CAGR | 0.14398603 |
+| Average Absolute CAGR Change | 0.26255675 |
+| HW4 Mean-Return Stability Corr | 0.11067852 |
+
+## Appendix C. Q2(b) Equal-Weight Portfolio Metrics ([`hw5_q2b_equal_weight_metrics.csv`](../exhibits/hw5_q2b_equal_weight_metrics.csv))
+
+Table C1 reproduces the full equal-weight portfolio metrics exhibit for Q2(b).
+
+| Observations | Cumulative Return | Annualized Return | Annualized Volatility | Sharpe Ratio | Max Drawdown | CAGR | Average Daily Turnover | Annualized Turnover |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 751 | 0.74999860 | 0.19784604 | 0.14167941 | 1.39643468 | -0.18947061 | 0.20656836 | 0.00642659 | 1.61949945 |
+
+## Appendix D. Q2(c) Portfolio Comparison ([`hw5_q2c_portfolio_comparison.csv`](../exhibits/hw5_q2c_portfolio_comparison.csv))
+
+Table D1 reproduces the full portfolio-comparison exhibit for Q2(c).
+
+| Portfolio | AssetsIncluded | RebalancedDaily | Cumulative Return | Annualized Return | Annualized Volatility | Sharpe Ratio | Max Drawdown | CAGR | Beta to SPY | Correlation to SPY | Effective Names | Top-5 Weight Sum | Average Daily Turnover | Annualized Turnover |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Equal Weight 1/n | 50 | Yes | 0.74999860 | 0.19784604 | 0.14167941 | 1.39643468 | -0.18947061 | 0.20656836 | 0.84586541 | 0.90822736 | 50.00000000 | 0.10000000 | 0.00642659 | 1.61949945 |
+| HW4 GMV | 49 | No | 0.47718621 | 0.13849989 | 0.12302078 | 1.12582517 | -0.12386236 | 0.13986767 | 0.33688849 | 0.41658896 | 6.94422797 | 0.74344588 | 0.00000000 | 0.00000000 |
 
 ## Appendix E. Compact Summary Metrics
 
