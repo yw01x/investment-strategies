@@ -48,28 +48,28 @@ I begin by rewriting the two optimization problems in compact notation.
 
 Let the feasible set be
 
-$$
+```math
 \mathcal{S} = \{x \in \mathbb{R}^n : \mathbf{1}'x = 1,\; x \ge 0\}.
-$$
+```
 
 
 The reduced-form expected-return maximization problem with a variance cap is
 
-$$
+```math
 \text{(P}_{\sigma_{\max}}\text{)} \qquad
 \max_{x \in \mathcal{S}} \; \mu'x
 \quad \text{subject to} \quad
 x'\Sigma x \le \sigma_{\max}.
-$$
+```
 
 
 The risk-aversion formulation is
 
-$$
+```math
 \text{(U}_{\lambda}\text{)} \qquad
 \max_{x \in \mathcal{S}} \; \mu'x - \lambda x'\Sigma x,
 \qquad \lambda \in [0,\infty).
-$$
+```
 
 
 I now show carefully that these two formulations are equivalent descriptions of efficient portfolios.
@@ -80,70 +80,70 @@ Take any fixed risk-aversion parameter `lambda >= 0`, and let `x_lambda` be an o
 
 Define the variance level actually chosen by that optimizer as
 
-$$
+```math
 \bar{\sigma} = x_{\lambda}' \Sigma x_{\lambda}.
-$$
+```
 
 
 I claim that `x_lambda` must also solve the reduced-form return-maximization problem with variance cap equal to its own realized variance, that is,
 
-$$
+```math
 \max_{x \in \mathcal{S}} \; \mu'x
 \quad \text{subject to} \quad
 x'\Sigma x \le \bar{\sigma}.
-$$
+```
 
 
 To prove this, suppose the claim were false. Then there would exist some feasible portfolio `y` in the feasible set such that
 
-$$
+```math
 y'\Sigma y \le \bar{\sigma}
-$$
+```
 
 
 and
 
-$$
+```math
 \mu'y > \mu'x_{\lambda}.
-$$
+```
 
 
 Now compare the objective values in problem `U_lambda`:
 
-$$
+```math
 \mu'y - \lambda y'\Sigma y
 \ge
 \mu'y - \lambda \bar{\sigma}
-$$
+```
 
 
 because `y` satisfies the variance cap and `lambda >= 0`.
 
 Since `y` has strictly higher expected return than `x_lambda`, we then obtain
 
-$$
+```math
 \mu'y - \lambda y'\Sigma y
 >
 \mu'x_{\lambda} - \lambda \bar{\sigma}.
-$$
+```
 
 
 But by definition of the realized variance cap,
 
-$$
+```math
 \mu'x_{\lambda} - \lambda \bar{\sigma}
 =
 \mu'x_{\lambda} - \lambda x_{\lambda}'\Sigma x_{\lambda}.
-$$
+```
 
 
 Therefore
 
-$$
+```math
 \mu'y - \lambda y'\Sigma y
 >
 \mu'x_{\lambda} - \lambda x_{\lambda}'\Sigma x_{\lambda},
-$$
+```
 
 
 which contradicts the fact that `x_lambda` is optimal for `U_lambda`.
@@ -156,34 +156,34 @@ I first treat the case `lambda > 0` and show that `x_lambda` cannot be dominated
 
 Suppose, for contradiction, that `x_lambda` were not efficient. Then there would exist some feasible portfolio `y` such that
 
-$$
+```math
 \mu'y \ge \mu'x_{\lambda},
-$$
+```
 
 
-$$
+```math
 y'\Sigma y \le x_{\lambda}'\Sigma x_{\lambda},
-$$
+```
 
 
 and at least one of these two inequalities would be strict.
 
 If `lambda > 0`, then
 
-$$
+```math
 \mu'y - \lambda y'\Sigma y
 \ge
 \mu'x_{\lambda} - \lambda x_{\lambda}'\Sigma x_{\lambda},
-$$
+```
 
 
 and because at least one inequality is strict, the right-hand side is strictly improved:
 
-$$
+```math
 \mu'y - \lambda y'\Sigma y
 >
 \mu'x_{\lambda} - \lambda x_{\lambda}'\Sigma x_{\lambda}.
-$$
+```
 
 
 That contradicts optimality of `x_lambda` for `U_lambda`.
@@ -192,23 +192,23 @@ This proves efficiency for every optimizer of `U_lambda` with `lambda > 0`.
 
 If `lambda = 0`, then `U_0` becomes
 
-$$
+```math
 \max_{x \in \mathcal{S}} \mu'x.
-$$
+```
 
 
 In that case, the objective only selects portfolios with maximal expected return. In general, if several portfolios attain the same maximal expected return, not every such maximizer must also have the smallest variance among that set. To match the efficient frontier exactly, I therefore interpret the `lambda = 0` case as follows: among all solutions to `U_0`, select one with the smallest variance.
 
 Call that selected portfolio `x_0_min_sigma`. If there were some feasible portfolio `y` with
 
-$$
+```math
 \mu'y \ge \mu'x_0^{\min \sigma},
-$$
+```
 
 
-$$
+```math
 y'\Sigma y \le (x_0^{\min \sigma})'\Sigma x_0^{\min \sigma},
-$$
+```
 
 
 and at least one strict inequality, then either:
@@ -224,14 +224,14 @@ The previous two steps show that every solution to `U_lambda` lies on the effici
 
 Consider the variance-capped problem and write its Lagrangian:
 
-$$
+```math
 \mathcal{L}(x,\gamma,\alpha,\nu)
 =
 \mu'x
 - \gamma (x'\Sigma x - \sigma_{\max})
 + \alpha(\mathbf{1}'x - 1)
 + \nu'x,
-$$
+```
 
 
 where
@@ -242,54 +242,54 @@ where
 
 The KKT first-order condition is
 
-$$
+```math
 \mu - 2\gamma \Sigma x + \alpha \mathbf{1} + \nu = 0.
-$$
+```
 
 
 The remaining KKT conditions are
 
-$$
+```math
 x'\Sigma x \le \sigma_{\max}, \qquad \mathbf{1}'x = 1, \qquad x \ge 0,
-$$
+```
 
 
-$$
+```math
 \gamma \ge 0, \qquad \nu \ge 0,
-$$
+```
 
 
-$$
+```math
 \gamma(x'\Sigma x - \sigma_{\max}) = 0,
-$$
+```
 
 
-$$
+```math
 \nu_i x_i = 0 \quad \text{for each } i.
-$$
+```
 
 
 Now look at `U_lambda`. Its Lagrangian is
 
-$$
+```math
 \widetilde{\mathcal{L}}(x,\alpha,\nu)
 =
 \mu'x - \lambda x'\Sigma x + \alpha(\mathbf{1}'x - 1) + \nu'x,
-$$
+```
 
 
 and its first-order condition is
 
-$$
+```math
 \mu - 2\lambda \Sigma x + \alpha \mathbf{1} + \nu = 0.
-$$
+```
 
 
 These conditions are the same as the KKT conditions of the variance-capped problem once I set
 
-$$
+```math
 \lambda = \gamma^{\ast},
-$$
+```
 
 
 where `gamma_star` is the optimal multiplier on the variance constraint.
@@ -326,21 +326,21 @@ For each stock index `i` and each subperiod `s in {1,2}`, let the daily adjusted
 
 I define the realized gross growth over subperiod `s` as
 
-$$
+```math
 \prod_{t=1}^{T_s}(1+r_{i,t}^{(s)}).
-$$
+```
 
 
 I then annualize that realized growth rate using the same `252`-trading-day convention used in HW4:
 
-$$
+```math
 g_i^{(s)}
 =
 \left[
 \prod_{t=1}^{T_s}(1+r_{i,t}^{(s)})
 \right]^{252/T_s}
 - 1.
-$$
+```
 
 
 This gives one annualized realized growth rate for each stock in the first 3-year period and one annualized realized growth rate for the same stock in the second 3-year period.
@@ -424,9 +424,9 @@ For this part I follow the assignment literally and construct a `1/n` portfolio 
 
 Since `n = 50`, the target weight on each stock is
 
-$$
+```math
 w_i = \frac{1}{50} = 0.02000.
-$$
+```
 
 
 The portfolio is rebalanced daily, so after each trading day the weights are reset to `2.00000%` per stock for the following day.
@@ -437,20 +437,20 @@ Let `r_{i,t}` denote the realized daily return of stock `i` on day `t` in the se
 
 Because the beginning-of-day weights are equal each day, the portfolio return on day `t` is
 
-$$
+```math
 r_{p,t}^{EW}
 =
 \sum_{i=1}^{50} w_i r_{i,t}
 =
 \frac{1}{50}\sum_{i=1}^{50} r_{i,t}.
-$$
+```
 
 
 The cumulative wealth process therefore evolves as
 
-$$
+```math
 V_t = V_{t-1}(1+r_{p,t}^{EW}),
-$$
+```
 
 
 with `V_0 = 1`.
@@ -461,23 +461,23 @@ Daily rebalancing has a trading implication, so I also report turnover.
 
 If the portfolio starts day `t` with equal weights `1/50`, then after the day’s returns but before rebalancing, the drifted weight on stock `i` is
 
-$$
+```math
 \widetilde{w}_{i,t}
 =
 \frac{\frac{1}{50}(1+r_{i,t})}{1+r_{p,t}^{EW}}.
-$$
+```
 
 
 To rebalance back to equal weights, the one-way turnover on day `t` is
 
-$$
+```math
 \tau_t
 =
 \frac{1}{2}\sum_{i=1}^{50}
 \left|
 \widetilde{w}_{i,t} - \frac{1}{50}
 \right|.
-$$
+```
 
 
 I report both the average daily turnover and the corresponding annualized turnover, computed as `252` times the average daily turnover.
