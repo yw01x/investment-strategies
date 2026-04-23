@@ -2,12 +2,10 @@
 
 ## Summary of Answers
 
-| Question | Summary Answer |
-| --- | --- |
-| **Q1** | The risk-aversion formulation `max_x μ'x - λx'Σx` is equivalent to the reduced-form expected-return maximization problem `max_x μ'x` subject to a volatility cap. For every `λ >= 0`, the optimizer is an efficient portfolio. Conversely, every optimizer of the volatility-constrained problem is also an optimizer of the risk-aversion problem for `λ` equal to the KKT multiplier on the volatility constraint. |
-| **Q2(a)** | Using the same two 3-year windows as in HW4 and excluding `GEHC` as instructed, the cross-sectional Pearson correlation between first-period and second-period annualized stock growth rates is only `0.04989`, and the Spearman rank correlation is `-0.00684`. This means growth-rate persistence is extremely weak and is even weaker than the `0.11068` mean-return stability correlation I found in HW4(k). |
-| **Q2(b)** | The 50-stock daily rebalanced `1/n` portfolio over the second 3-year period produces cumulative return `74.99986%`, annualized return `19.78460%`, annualized volatility `14.16794%`, Sharpe ratio `1.39643`, maximum drawdown `-18.94706%`, CAGR `20.65684%`, average daily turnover `0.64266%`, and annualized turnover `161.94995%`. |
-| **Q2(c)** | Relative to the HW4 long-only GMV portfolio, the rebalanced `1/n` portfolio earns higher cumulative return (`74.99986%` versus `47.71862%`) and a higher Sharpe ratio (`1.39643` versus `1.12583`), but it also has higher volatility (`14.16794%` versus `12.30208%`), a deeper maximum drawdown (`-18.94706%` versus `-12.38624%`), much higher market exposure (`β_{SPY}=0.84587` versus `0.33689`), and materially higher trading intensity. |
+- **Q1.** The risk-aversion formulation of mean-variance optimization is equivalent to the volatility-capped expected-return maximization problem. For every nonnegative risk-aversion parameter, the optimizer is an efficient portfolio. Conversely, every optimizer of the volatility-constrained problem can be recovered from the risk-aversion problem by choosing the risk-aversion parameter equal to the KKT multiplier on the variance cap.
+- **Q2(a).** Using the same two 3-year windows as in HW4 and excluding `GEHC` as instructed, the cross-sectional Pearson correlation between first-period and second-period annualized stock growth rates is only `0.04989`, and the Spearman rank correlation is `-0.00684`. Growth-rate persistence is therefore extremely weak and is even weaker than the `0.11068` mean-return stability correlation from HW4(k).
+- **Q2(b).** The 50-stock daily rebalanced `1/n` portfolio over the second 3-year period produces cumulative return `74.99986%`, annualized return `19.78460%`, annualized volatility `14.16794%`, Sharpe ratio `1.39643`, maximum drawdown `-18.94706%`, CAGR `20.65684%`, average daily turnover `0.64266%`, and annualized turnover `161.94995%`.
+- **Q2(c).** Relative to the HW4 long-only GMV portfolio, the rebalanced `1/n` portfolio earns higher cumulative return and a higher Sharpe ratio, but it also has higher volatility, a deeper maximum drawdown, a much higher beta to `SPY`, and materially higher trading intensity.
 
 Supporting exhibits used in this write-up:
 
@@ -61,9 +59,9 @@ $$
 
 I now show carefully that these two formulations are equivalent descriptions of efficient portfolios.
 
-### Step 1. Any optimizer of `(U_λ)` solves a volatility-constrained return-maximization problem
+### Step 1. Any optimizer of $(U_{\lambda})$ solves a volatility-constrained return-maximization problem
 
-Take any fixed `λ >= 0`, and let `x_λ` be an optimizer of `(U_λ)`.
+Take any fixed $\lambda \ge 0$, and let $x_{\lambda}$ be an optimizer of $(U_{\lambda})$.
 
 Define the variance level actually chosen by that optimizer as
 
@@ -71,7 +69,7 @@ $$
 \bar{\sigma} = x_{\lambda}' \Sigma x_{\lambda}.
 $$
 
-I claim that `x_λ` must also solve `(P_{\bar{\sigma}})`, that is,
+I claim that $x_{\lambda}$ must also solve $(P_{\bar{\sigma}})$, that is,
 
 $$
 \max_{x \in \mathcal{S}} \; \mu'x
@@ -79,7 +77,7 @@ $$
 x'\Sigma x \le \bar{\sigma}.
 $$
 
-To prove this, suppose the claim were false. Then there would exist some feasible portfolio `y \in \mathcal{S}` such that
+To prove this, suppose the claim were false. Then there would exist some feasible portfolio $y \in \mathcal{S}$ such that
 
 $$
 y'\Sigma y \le \bar{\sigma}
@@ -91,7 +89,7 @@ $$
 \mu'y > \mu'x_{\lambda}.
 $$
 
-Now compare the objective values in `(U_λ)`:
+Now compare the objective values in $(U_{\lambda})$:
 
 $$
 \mu'y - \lambda y'\Sigma y
@@ -99,9 +97,9 @@ $$
 \mu'y - \lambda \bar{\sigma}
 $$
 
-because `y'\Sigma y <= \bar{\sigma}` and `\lambda >= 0`.
+because $y'\Sigma y \le \bar{\sigma}$ and $\lambda \ge 0$.
 
-Since `\mu'y > \mu'x_\lambda`, we then obtain
+Since $\mu'y > \mu'x_{\lambda}$, we then obtain
 
 $$
 \mu'y - \lambda y'\Sigma y
@@ -109,7 +107,7 @@ $$
 \mu'x_{\lambda} - \lambda \bar{\sigma}.
 $$
 
-But by definition of `\bar{\sigma}`,
+But by definition of $\bar{\sigma}$,
 
 $$
 \mu'x_{\lambda} - \lambda \bar{\sigma}
@@ -125,15 +123,15 @@ $$
 \mu'x_{\lambda} - \lambda x_{\lambda}'\Sigma x_{\lambda},
 $$
 
-which contradicts the fact that `x_λ` is optimal for `(U_λ)`.
+which contradicts the fact that $x_{\lambda}$ is optimal for $(U_{\lambda})$.
 
-So the contradiction proves that `x_λ` indeed solves `(P_{\bar{\sigma}})`.
+So the contradiction proves that $x_{\lambda}$ indeed solves $(P_{\bar{\sigma}})$.
 
-### Step 2. Any optimizer of `(U_λ)` is an efficient portfolio
+### Step 2. Any optimizer of $(U_{\lambda})$ is an efficient portfolio
 
-I now show that `x_λ` cannot be dominated by another feasible portfolio.
+I now show that $x_{\lambda}$ cannot be dominated by another feasible portfolio.
 
-Suppose, for contradiction, that `x_λ` were not efficient. Then there would exist some `y \in \mathcal{S}` such that
+Suppose, for contradiction, that $x_{\lambda}$ were not efficient. Then there would exist some $y \in \mathcal{S}$ such that
 
 $$
 \mu'y \ge \mu'x_{\lambda},
@@ -145,7 +143,7 @@ $$
 
 and at least one of these two inequalities would be strict.
 
-If `\lambda > 0`, then
+If $\lambda > 0$, then
 
 $$
 \mu'y - \lambda y'\Sigma y
@@ -161,23 +159,23 @@ $$
 \mu'x_{\lambda} - \lambda x_{\lambda}'\Sigma x_{\lambda}.
 $$
 
-That contradicts optimality of `x_λ` for `(U_λ)`.
+That contradicts optimality of $x_{\lambda}$ for $(U_{\lambda})$.
 
-If `\lambda = 0`, then `(U_0)` becomes
+If $\lambda = 0$, then $(U_0)$ becomes
 
 $$
 \max_{x \in \mathcal{S}} \mu'x.
 $$
 
-In that case, any feasible `y` with strictly larger expected return would also contradict optimality. Therefore `x_0` is also efficient.
+In that case, any feasible $y$ with strictly larger expected return would also contradict optimality. Therefore $x_0$ is also efficient.
 
-Hence every optimizer of `(U_λ)` is an efficient portfolio.
+Hence every optimizer of $(U_{\lambda})$ is an efficient portfolio.
 
 ### Step 3. Converse direction via the KKT conditions
 
-The previous two steps show that every solution to `(U_λ)` lies on the efficient frontier. To complete the equivalence, I now show that every solution to `(P_{\sigma_{\max}})` can be represented as a solution to `(U_λ)` for an appropriate `λ`.
+The previous two steps show that every solution to $(U_{\lambda})$ lies on the efficient frontier. To complete the equivalence, I now show that every solution to $(P_{\sigma_{\max}})$ can be represented as a solution to $(U_{\lambda})$ for an appropriate $\lambda$.
 
-Consider `(P_{\sigma_{\max}})` and write its Lagrangian:
+Consider $(P_{\sigma_{\max}})$ and write its Lagrangian:
 
 $$
 \mathcal{L}(x,\gamma,\alpha,\nu)
@@ -190,9 +188,9 @@ $$
 
 where
 
-- `\gamma >= 0` is the multiplier on the volatility constraint,
-- `\alpha` is the multiplier on the full-investment constraint,
-- `\nu >= 0` is the vector of multipliers on the long-only constraints.
+- $\gamma \ge 0$ is the multiplier on the volatility constraint,
+- $\alpha$ is the multiplier on the full-investment constraint,
+- $\nu \ge 0$ is the vector of multipliers on the long-only constraints.
 
 The KKT first-order condition is
 
@@ -218,7 +216,7 @@ $$
 \nu_i x_i = 0 \quad \text{for each } i.
 $$
 
-Now look at `(U_λ)`. Its Lagrangian is
+Now look at $(U_{\lambda})$. Its Lagrangian is
 
 $$
 \widetilde{\mathcal{L}}(x,\alpha,\nu)
@@ -232,32 +230,32 @@ $$
 \mu - 2\lambda \Sigma x + \alpha \mathbf{1} + \nu = 0.
 $$
 
-These conditions are the same as the KKT conditions of `(P_{\sigma_{\max}})` once I set
+These conditions are the same as the KKT conditions of $(P_{\sigma_{\max}})$ once I set
 
 $$
 \lambda = \gamma^{\ast},
 $$
 
-where `\gamma^{\ast}` is the optimal multiplier on the volatility constraint.
+where $\gamma^{\ast}$ is the optimal multiplier on the volatility constraint.
 
 There are two cases:
 
 1. **The volatility constraint binds.**  
-   Then `\gamma^{\ast} > 0` is the shadow value of relaxing the risk cap, and choosing `\lambda = \gamma^{\ast}` makes the first-order conditions identical.
+   Then $\gamma^{\ast} > 0$ is the shadow value of relaxing the risk cap, and choosing $\lambda = \gamma^{\ast}$ makes the first-order conditions identical.
 
 2. **The volatility constraint does not bind.**  
-   Then complementary slackness implies `\gamma^{\ast} = 0`, so the constrained problem reduces locally to pure expected-return maximization over `\mathcal{S}`. That is exactly `(U_0)`.
+   Then complementary slackness implies $\gamma^{\ast} = 0$, so the constrained problem reduces locally to pure expected-return maximization over $\mathcal{S}$. That is exactly $(U_0)$.
 
-Therefore every optimizer of `(P_{\sigma_{\max}})` is also an optimizer of `(U_{\lambda})` for an appropriate `\lambda`.
+Therefore every optimizer of $(P_{\sigma_{\max}})$ is also an optimizer of $(U_{\lambda})$ for an appropriate $\lambda$.
 
 ### Conclusion for Question 1
 
 I have now shown both directions:
 
-- Every optimizer of the risk-aversion problem `(U_λ)` solves a reduced-form return-maximization problem with the volatility cap set equal to its own realized variance.
-- Every optimizer of the reduced-form return-maximization problem `(P_{\sigma_{\max}})` solves the risk-aversion problem `(U_λ)` for `\lambda` equal to the KKT multiplier on the volatility constraint.
+- Every optimizer of the risk-aversion problem $(U_{\lambda})$ solves a reduced-form return-maximization problem with the volatility cap set equal to its own realized variance.
+- Every optimizer of the reduced-form return-maximization problem $(P_{\sigma_{\max}})$ solves the risk-aversion problem $(U_{\lambda})$ for $\lambda$ equal to the KKT multiplier on the volatility constraint.
 
-So the two formulations are equivalent descriptions of the efficient frontier. Put differently, the parameter `\lambda` is not generating a different class of portfolios; it is simply another way to index efficient portfolios.
+So the two formulations are equivalent descriptions of the efficient frontier. Put differently, the parameter $\lambda$ is not generating a different class of portfolios; it is simply another way to index efficient portfolios.
 
 ## 2. Portfolio Construction: Single Period vs. Rebalancing
 
@@ -267,7 +265,7 @@ The assignment asks me to repeat the spirit of HW4(k), but now for stock growth 
 
 Because the note explicitly says I may ignore the stock with no first-period data, I exclude `GEHC` and work with the remaining `49` stocks.
 
-For each stock `i` and for each subperiod `s \in \{1,2\}`, let the daily adjusted-close total returns be `r_{i,t}^{(s)}` for `t = 1, \dots, T_s`.
+For each stock $i$ and for each subperiod $s \in \{1,2\}$, let the daily adjusted-close total returns be $r_{i,t}^{(s)}$ for $t = 1, \dots, T_s$.
 
 I define the realized gross growth over subperiod `s` as
 
@@ -288,7 +286,7 @@ $$
 
 This gives one annualized realized growth rate for each stock in the first 3-year period and one annualized realized growth rate for the same stock in the second 3-year period.
 
-Once these `49` pairs of growth rates are computed, I evaluate their cross-sectional stability exactly as in the Sharpe-style exercise: I compare the first-period vector `(g_i^{(1)})` with the second-period vector `(g_i^{(2)})`.
+Once these `49` pairs of growth rates are computed, I evaluate their cross-sectional stability exactly as in the Sharpe-style exercise: I compare the first-period vector $g_i^{(1)}$ with the second-period vector $g_i^{(2)}$.
 
 #### Main numerical findings
 
@@ -354,7 +352,7 @@ The portfolio is rebalanced daily, so after each trading day the weights are res
 
 #### Daily portfolio return formula
 
-Let `r_{i,t}` denote the realized daily return of stock `i` on day `t` in the second 3-year period.
+Let $r_{i,t}$ denote the realized daily return of stock $i$ on day $t$ in the second 3-year period.
 
 Because the beginning-of-day weights are equal each day, the portfolio return on day `t` is
 
@@ -397,7 +395,7 @@ $$
 \right|.
 $$
 
-I report both the average daily turnover and the corresponding annualized turnover `252 \times \bar{\tau}`.
+I report both the average daily turnover and the corresponding annualized turnover $252 \times \bar{\tau}$.
 
 #### Performance metrics
 
