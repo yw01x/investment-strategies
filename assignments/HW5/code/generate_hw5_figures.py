@@ -68,10 +68,25 @@ def pct(value: float) -> str:
     return f"{100.0 * value:.2f}%"
 
 
+def metric_text(label: str, value: float) -> str:
+    percent_labels = {
+        "Cumulative Return",
+        "Annualized Return",
+        "Annualized Volatility",
+        "Max Drawdown Magnitude",
+        "CAGR",
+        "Annualized Turnover",
+        "Top-5 Weight Sum",
+    }
+    if label in percent_labels:
+        return pct(value)
+    return f"{value:.4f}"
+
+
 def draw_growth_scatter(result: dict[str, object], path: Path) -> None:
     rows = result["growth_rows"]
-    width, height = 1100, 760
-    left, right, top, bottom = 110, 70, 110, 110
+    width, height = 1140, 790
+    left, right, top, bottom = 190, 70, 110, 130
     plot_w = width - left - right
     plot_h = height - top - bottom
 
@@ -111,23 +126,21 @@ def draw_growth_scatter(result: dict[str, object], path: Path) -> None:
         add_circle(parts, sx(row["FirstPeriodCAGR"]), sy(row["SecondPeriodCAGR"]), 5.5, color)
 
     notable = sorted(rows, key=lambda row: abs(row["Difference"]), reverse=True)[:8]
-    for row in notable:
+    label_offsets = [(10, -10), (10, 18), (-10, -10), (-10, 18), (12, -14), (12, 20), (-12, -14), (-12, 20)]
+    for row, (dx, dy) in zip(notable, label_offsets):
         x = sx(row["FirstPeriodCAGR"])
         y = sy(row["SecondPeriodCAGR"])
-        add_text(parts, x + 8, y - 8, row["Ticker"], size=12, fill=PALETTE["text"])
+        anchor = "start" if dx > 0 else "end"
+        add_text(parts, x + dx, y + dy, row["Ticker"], size=12, fill=PALETTE["text"], anchor=anchor)
 
-    add_text(parts, left + plot_w / 2, height - 34, "First-period annualized stock growth (CAGR)", size=14, anchor="middle")
-    add_text(parts, 28, top + plot_h / 2, "Second-period annualized stock growth (CAGR)", size=14, fill=PALETTE["text"], anchor="middle")
-    parts.append(
-        f'<g transform="translate(28,{top + plot_h / 2}) rotate(-90)"></g>'
-    )
-    # Visible rotated label
-    parts.append(
-        f'<text x="28" y="{top + plot_h / 2}" font-family="Helvetica, Arial, sans-serif" font-size="14" '
-        f'fill="{PALETTE["text"]}" text-anchor="middle" transform="rotate(-90 28 {top + plot_h / 2})">Second-period annualized stock growth (CAGR)</text>'
-    )
+    add_text(parts, left + plot_w / 2, height - 42, "First-period annualized stock growth (CAGR)", size=14, anchor="middle")
+    y_axis_label = ["Second-period", "annualized stock growth", "(CAGR)"]
+    label_x = 74
+    label_y = top + plot_h / 2 - 20
+    for idx, line in enumerate(y_axis_label):
+        add_text(parts, label_x, label_y + 18 * idx, line, size=13, fill=PALETTE["text"], anchor="middle")
 
-    legend_y = height - 68
+    legend_y = height - 76
     add_circle(parts, left, legend_y, 5.5, PALETTE["green"])
     add_text(parts, left + 14, legend_y + 5, "Improved versus first period", size=13)
     add_circle(parts, left + 250, legend_y, 5.5, PALETTE["orange"])
@@ -142,15 +155,15 @@ def draw_portfolio_comparison(result: dict[str, object], path: Path) -> None:
     eq_row = rows[0]
     gmv_row = rows[1]
 
-    width, height = 1280, 820
+    width, height = 1320, 940
     parts = svg_header(width, height)
     add_text(parts, 60, 42, "Figure 2. Equal-Weight vs. HW4 GMV Portfolio", size=28, weight="700")
     add_text(parts, 60, 72, "Second 3-year evaluation window. Green means 'more' and orange means 'more defensive / lower'.", size=14, fill=PALETTE["muted"])
 
-    add_rect(parts, 60, 110, 520, 640, PALETTE["light"], rx=18)
-    add_rect(parts, 640, 110, 580, 640, PALETTE["light"], rx=18)
+    add_rect(parts, 60, 110, 540, 740, PALETTE["light"], rx=18)
+    add_rect(parts, 640, 110, 620, 740, PALETTE["light"], rx=18)
     add_text(parts, 90, 145, "Performance", size=20, weight="700")
-    add_text(parts, 670, 145, "Risk, Market Exposure, and Implementation", size=20, weight="700")
+    add_text(parts, 670, 145, "Risk, Exposure, and Implementation", size=20, weight="700")
 
     left_metrics = [
         ("Cumulative Return", eq_row["Cumulative Return"], gmv_row["Cumulative Return"], True),
@@ -166,34 +179,34 @@ def draw_portfolio_comparison(result: dict[str, object], path: Path) -> None:
         ("Top-5 Weight Sum", eq_row["Top-5 Weight Sum"], gmv_row["Top-5 Weight Sum"], False),
     ]
 
-    def draw_metric_block(x0: float, y0: float, label: str, eq_value: float, gmv_value: float, higher_is_better: bool) -> None:
+    def draw_metric_block(x0: float, y0: float, label: str, eq_value: float, gmv_value: float, higher_is_better: bool,
+                          bar_w: float = 370) -> float:
         add_text(parts, x0, y0, label, size=14, weight="700")
         max_value = max(eq_value, gmv_value, 1e-12)
         bar_x = x0
-        bar_y = y0 + 18
-        bar_w = 420
+        bar_y = y0 + 20
         bar_h = 22
         add_rect(parts, bar_x, bar_y, bar_w, bar_h, "#ffffff", stroke=PALETTE["grid"], rx=8)
         add_rect(parts, bar_x, bar_y, bar_w * eq_value / max_value, bar_h, PALETTE["green"], rx=8)
         add_rect(parts, bar_x, bar_y + 36, bar_w, bar_h, "#ffffff", stroke=PALETTE["grid"], rx=8)
         add_rect(parts, bar_x, bar_y + 36, bar_w * gmv_value / max_value, bar_h, PALETTE["orange"], rx=8)
-        add_text(parts, bar_x + bar_w + 14, bar_y + 16, f"EW: {eq_value:.4f}", size=13, fill=PALETTE["text"])
-        add_text(parts, bar_x + bar_w + 14, bar_y + 52, f"GMV: {gmv_value:.4f}", size=13, fill=PALETTE["text"])
+        add_text(parts, bar_x + bar_w + 16, bar_y + 16, f"EW: {metric_text(label, eq_value)}", size=13, fill=PALETTE["text"])
+        add_text(parts, bar_x + bar_w + 16, bar_y + 52, f"GMV: {metric_text(label, gmv_value)}", size=13, fill=PALETTE["text"])
         winner = "Equal Weight" if (eq_value >= gmv_value if higher_is_better else eq_value <= gmv_value) else "HW4 GMV"
-        add_text(parts, bar_x, bar_y + 78, f"Preferred on this metric: {winner}", size=12, fill=PALETTE["muted"])
+        preferred_y = bar_y + 88
+        add_text(parts, bar_x, preferred_y, f"Preferred on this metric: {winner}", size=12, fill=PALETTE["muted"])
+        return preferred_y + 24
 
     y = 190
     for label, eq_value, gmv_value, higher_is_better in left_metrics:
-        draw_metric_block(90, y, label, eq_value, gmv_value, higher_is_better)
-        y += 125
+        y = draw_metric_block(90, y, label, eq_value, gmv_value, higher_is_better, bar_w=380)
 
     y = 190
     for label, eq_value, gmv_value, higher_is_better in right_metrics:
-        draw_metric_block(670, y, label, eq_value, gmv_value, higher_is_better)
-        y += 105
+        y = draw_metric_block(670, y, label, eq_value, gmv_value, higher_is_better, bar_w=360)
 
-    add_text(parts, 90, 722, "Green bars: daily rebalanced 50-stock equal-weight portfolio", size=13, fill=PALETTE["muted"])
-    add_text(parts, 90, 744, "Orange bars: fixed-weight HW4 global minimum-variance portfolio", size=13, fill=PALETTE["muted"])
+    add_text(parts, 90, 826, "Green bars: daily rebalanced 50-stock equal-weight portfolio", size=13, fill=PALETTE["muted"])
+    add_text(parts, 90, 850, "Orange bars: fixed-weight HW4 global minimum-variance portfolio", size=13, fill=PALETTE["muted"])
 
     with open(path, "w") as handle:
         handle.write("\n".join(parts + svg_footer()))

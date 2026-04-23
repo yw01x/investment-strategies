@@ -1,93 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
-<rect x="0" y="0" width="1100" height="760" fill="#ffffff"/>
-<text x="110" y="42" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#243040" text-anchor="start">Figure 1. Growth-Rate Stability Across the Two 3-Year Windows</text>
-<text x="110" y="72" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Each dot is one stock. The dashed diagonal is the line of perfect stability.</text>
-<line x1="110" y1="650.0" x2="1030" y2="650.0" stroke="#d7dde5" stroke-width="1"/>
-<line x1="110.0" y1="110" x2="110.0" y2="650" stroke="#d7dde5" stroke-width="1"/>
-<text x="96" y="655.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">-29.18%</text>
-<text x="110.0" y="678" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">-29.18%</text>
-<line x1="110" y1="515.0" x2="1030" y2="515.0" stroke="#d7dde5" stroke-width="1"/>
-<line x1="340.0" y1="110" x2="340.0" y2="650" stroke="#d7dde5" stroke-width="1"/>
-<text x="96" y="520.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">3.70%</text>
-<text x="340.0" y="678" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">3.70%</text>
-<line x1="110" y1="380.0" x2="1030" y2="380.0" stroke="#d7dde5" stroke-width="1"/>
-<line x1="570.0" y1="110" x2="570.0" y2="650" stroke="#d7dde5" stroke-width="1"/>
-<text x="96" y="385.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">36.58%</text>
-<text x="570.0" y="678" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">36.58%</text>
-<line x1="110" y1="245.0" x2="1030" y2="245.0" stroke="#d7dde5" stroke-width="1"/>
-<line x1="800.0" y1="110" x2="800.0" y2="650" stroke="#d7dde5" stroke-width="1"/>
-<text x="96" y="250.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">69.46%</text>
-<text x="800.0" y="678" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">69.46%</text>
-<line x1="110" y1="110.0" x2="1030" y2="110.0" stroke="#d7dde5" stroke-width="1"/>
-<line x1="1030.0" y1="110" x2="1030.0" y2="650" stroke="#d7dde5" stroke-width="1"/>
-<text x="96" y="115.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">102.34%</text>
-<text x="1030.0" y="678" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">102.34%</text>
-<line x1="110" y1="650" x2="1030" y2="110" stroke="#5f6975" stroke-width="2" stroke-dasharray="6 6"/>
-<line x1="110" y1="110" x2="110" y2="650" stroke="#5f6975" stroke-width="1.5"/>
-<line x1="110" y1="650" x2="1030" y2="650" stroke="#5f6975" stroke-width="1.5"/>
-<circle cx="290.49733985732917" cy="387.176851596728" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="348.295470703825" cy="593.0769888965237" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="597.8164749830867" cy="451.29069523909396" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="953.8541793064531" cy="535.6792302652484" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="337.5699381823571" cy="471.34054237913296" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="415.47813156563535" cy="458.0058778585858" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="645.2324173139593" cy="479.60218589186945" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="454.29420966709574" cy="345.48756254197" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="274.6258737334229" cy="492.47934444726053" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="363.01965270201845" cy="349.4213025670097" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="294.9081141321625" cy="373.76732696824564" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="273.12411722649574" cy="339.83215316302085" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="720.012228708814" cy="147.24137931034477" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="394.49891069047646" cy="562.9640638428135" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="619.6261004445945" cy="586.881087750284" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="457.30850748956294" cy="511.6800364582454" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="541.9530691818011" cy="295.71301495086755" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="922.6811567006123" cy="441.9899215844716" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="379.6512545270032" cy="535.8344178870727" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="464.06098605689164" cy="356.55603172314625" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="584.8395273034141" cy="521.3415697995154" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="334.7828807787919" cy="357.29234335280466" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="728.0225444829749" cy="478.79804250784395" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="663.1655790051624" cy="499.8999072241381" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="335.90603250595507" cy="400.06944260624647" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="367.8874168174561" cy="552.8341629684152" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="588.5648048416997" cy="434.95938081699694" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="591.5816545764294" cy="537.0110207242415" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="393.9659525750891" cy="612.7586206896551" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="371.9251030073886" cy="461.0102349593243" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="605.1117975946212" cy="388.3778833022685" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="835.0074447687224" cy="480.98178025331293" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="475.21913566585096" cy="467.85027212586783" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="212.80047846666085" cy="446.78432980160414" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="233.70657511098995" cy="591.2565717486616" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="381.82327381802895" cy="471.0661529896083" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="492.4402403274076" cy="373.27732450452623" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="359.2743022727029" cy="536.3004376163702" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="479.8986667585683" cy="262.80059816711736" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="335.18384786829733" cy="397.47793394800595" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="387.75455023653774" cy="484.7879443566761" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="430.4006352575017" cy="553.6426630243661" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="550.244826846327" cy="455.0165583676191" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="368.45480051783716" cy="465.60103704716806" r="5.5" fill="#2d8f5b" stroke="none"/>
-<circle cx="586.3221458973012" cy="374.8169341674787" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="438.1774721431988" cy="507.96276276056665" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="459.66116197760005" cy="487.91374458915567" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="418.42873566414636" cy="536.9245487763628" r="5.5" fill="#c9791a" stroke="none"/>
-<circle cx="510.66910225431747" cy="589.6962325289" r="5.5" fill="#c9791a" stroke="none"/>
-<text x="961.8541793064531" y="527.6792302652484" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">DVN</text>
-<text x="930.6811567006123" y="433.9899215844716" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">ARLP</text>
-<text x="843.0074447687224" y="472.98178025331293" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">MGY</text>
-<text x="627.6261004445945" y="578.881087750284" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">VC</text>
-<text x="281.12411722649574" y="331.83215316302085" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">NFLX</text>
-<text x="736.0225444829749" y="470.79804250784395" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">CPRX</text>
-<text x="518.6691022543175" y="581.6962325289" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">UPS</text>
-<text x="671.1655790051624" y="491.8999072241381" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">EOG</text>
-<text x="570.0" y="726" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#243040" text-anchor="middle">First-period annualized stock growth (CAGR)</text>
-<text x="28" y="380.0" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#243040" text-anchor="middle">Second-period annualized stock growth (CAGR)</text>
-<g transform="translate(28,380.0) rotate(-90)"></g>
-<text x="28" y="380.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#243040" text-anchor="middle" transform="rotate(-90 28 380.0)">Second-period annualized stock growth (CAGR)</text>
-<circle cx="110" cy="692" r="5.5" fill="#2d8f5b" stroke="none"/>
-<text x="124" y="697" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">Improved versus first period</text>
-<circle cx="360" cy="692" r="5.5" fill="#c9791a" stroke="none"/>
-<text x="374" y="697" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">Deteriorated versus first period</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="790" viewBox="0 0 1140 790">
+<rect x="0" y="0" width="1140" height="790" fill="#ffffff"/>
+<text x="190" y="42" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#243040" text-anchor="start">Figure 1. Growth-Rate Stability Across the Two 3-Year Windows</text>
+<text x="190" y="72" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Each dot is one stock. The dashed diagonal is the line of perfect stability.</text>
+<line x1="190" y1="660.0" x2="1070" y2="660.0" stroke="#d7dde5" stroke-width="1"/>
+<line x1="190.0" y1="110" x2="190.0" y2="660" stroke="#d7dde5" stroke-width="1"/>
+<text x="176" y="665.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">-29.18%</text>
+<text x="190.0" y="688" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">-29.18%</text>
+<line x1="190" y1="522.5" x2="1070" y2="522.5" stroke="#d7dde5" stroke-width="1"/>
+<line x1="410.0" y1="110" x2="410.0" y2="660" stroke="#d7dde5" stroke-width="1"/>
+<text x="176" y="527.5" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">3.70%</text>
+<text x="410.0" y="688" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">3.70%</text>
+<line x1="190" y1="385.0" x2="1070" y2="385.0" stroke="#d7dde5" stroke-width="1"/>
+<line x1="630.0" y1="110" x2="630.0" y2="660" stroke="#d7dde5" stroke-width="1"/>
+<text x="176" y="390.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">36.58%</text>
+<text x="630.0" y="688" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">36.58%</text>
+<line x1="190" y1="247.5" x2="1070" y2="247.5" stroke="#d7dde5" stroke-width="1"/>
+<line x1="849.9999999999999" y1="110" x2="849.9999999999999" y2="660" stroke="#d7dde5" stroke-width="1"/>
+<text x="176" y="252.5" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">69.46%</text>
+<text x="849.9999999999999" y="688" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">69.46%</text>
+<line x1="190" y1="110.0" x2="1070" y2="110.0" stroke="#d7dde5" stroke-width="1"/>
+<line x1="1070.0" y1="110" x2="1070.0" y2="660" stroke="#d7dde5" stroke-width="1"/>
+<text x="176" y="115.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="end">102.34%</text>
+<text x="1070.0" y="688" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6b7280" text-anchor="middle">102.34%</text>
+<line x1="190" y1="660" x2="1070" y2="110" stroke="#5f6975" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="190" y1="110" x2="190" y2="660" stroke="#5f6975" stroke-width="1.5"/>
+<line x1="190" y1="660" x2="1070" y2="660" stroke="#5f6975" stroke-width="1.5"/>
+<circle cx="362.64962942874956" cy="392.3097562559267" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="417.9347980645282" cy="602.0228590612742" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="656.6070630273003" cy="457.6108932990772" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="997.1648671626945" cy="543.5621789738642" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="407.6755930439938" cy="478.03203390467246" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="482.1964736714773" cy="464.4504311522633" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="701.9614426481351" cy="486.44667081579297" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="519.324896203309" cy="349.8484433297843" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="347.4682270493611" cy="499.56229527035794" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="432.01879823671334" cy="353.8550303923247" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="366.868630909025" cy="378.6519070972872" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="346.03176430360463" cy="344.08830414752117" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="773.4899578953872" cy="147.93103448275858" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="462.12939283436884" cy="571.3522872473101" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="677.4684439035252" cy="595.7122190049188" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="522.2081375987124" cy="519.1185556519166" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="603.1725009565055" cy="299.1521448573651" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="967.347193365803" cy="448.13788309529514" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="447.9272869388726" cy="543.720240440537" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="528.6670301413747" cy="361.12188416246374" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="644.1943304641353" cy="528.9590062772842" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="405.0097120492792" cy="361.8718311926715" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="781.1519990706716" cy="485.6276358876188" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="719.114901657112" cy="507.1202758764369" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="406.0840310926527" cy="405.4410989508066" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="436.67492043408845" cy="561.0347956159784" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="647.7576394137998" cy="440.9771471284228" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="650.6433217687586" cy="544.9186322191348" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="461.6196068109548" cy="622.0689655172414" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="440.5370550505456" cy="467.5104244956081" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="663.5851976992029" cy="393.53302928934755" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="883.485381952691" cy="487.85181322096685" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="539.3400428108139" cy="474.4771290170876" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="288.33089244637125" cy="453.021076649782" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="308.3280283670338" cy="600.1687304847479" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="450.0048706085494" cy="477.7525632301567" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="555.8124037914333" cy="378.1528305138693" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="428.4362891304115" cy="544.1948901648216" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="543.8161160299348" cy="265.6302388739158" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="405.39324578706703" cy="402.80159939148757" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="455.6782654436448" cy="491.7284618447627" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="496.4701728550016" cy="561.8582678951877" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="611.1037474182258" cy="461.4057538929454" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="437.2176352779312" cy="472.1862414369304" r="5.5" fill="#2d8f5b" stroke="none"/>
+<circle cx="645.6124873800272" cy="379.72095146687644" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="503.9088863978423" cy="515.3324435524289" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="524.4585027611827" cy="494.91214726673263" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="485.0187906352704" cy="544.8305589388881" r="5.5" fill="#c9791a" stroke="none"/>
+<circle cx="573.2487065041297" cy="598.5794960942501" r="5.5" fill="#c9791a" stroke="none"/>
+<text x="1007.1648671626945" y="533.5621789738642" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">DVN</text>
+<text x="977.347193365803" y="466.13788309529514" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">ARLP</text>
+<text x="873.485381952691" y="477.85181322096685" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="end">MGY</text>
+<text x="667.4684439035252" y="613.7122190049188" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="end">VC</text>
+<text x="358.03176430360463" y="330.08830414752117" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">NFLX</text>
+<text x="793.1519990706716" y="505.6276358876188" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="start">CPRX</text>
+<text x="561.2487065041297" y="584.5794960942501" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="end">UPS</text>
+<text x="707.114901657112" y="527.1202758764368" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#243040" text-anchor="end">EOG</text>
+<text x="630.0" y="748" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#243040" text-anchor="middle">First-period annualized stock growth (CAGR)</text>
+<text x="74" y="365.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="middle">Second-period</text>
+<text x="74" y="383.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="middle">annualized stock growth</text>
+<text x="74" y="401.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="middle">(CAGR)</text>
+<circle cx="190" cy="714" r="5.5" fill="#2d8f5b" stroke="none"/>
+<text x="204" y="719" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">Improved versus first period</text>
+<circle cx="440" cy="714" r="5.5" fill="#c9791a" stroke="none"/>
+<text x="454" y="719" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#243040" text-anchor="start">Deteriorated versus first period</text>
 </svg>
