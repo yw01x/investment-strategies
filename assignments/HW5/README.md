@@ -1,6 +1,6 @@
 # Investment Strategy HW5
 
-This directory contains a cleaned repository package for the Investment Strategy HW5 submission.
+This directory contains the submission package for Investment Strategy HW5.
 
 ## Contents
 
@@ -38,8 +38,6 @@ This directory contains a cleaned repository package for the Investment Strategy
 
 ## Notes
 
-- This package is intentionally cleaner than the original local homework working directory.
-- Temporary files, intermediate HTML previews, `.DS_Store`, and duplicate outputs are omitted.
 - The committed `data/` directory preserves the adjusted-price files used in the HW5 calculations.
 - `code/hw5_analysis.py` is self-contained and uses the same 50-stock universe and the same 3-year windows as HW4.
 - `code/rebuild_hw5_package.sh` runs the full local pipeline from exhibits to figures to PDF.
