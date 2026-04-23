@@ -113,7 +113,6 @@ But by definition of `\bar{\sigma}`,
 
 $$
 \mu'x_{\lambda} - \lambda \bar{\sigma}
-
 =
 \mu'x_{\lambda} - \lambda x_{\lambda}'\Sigma x_{\lambda}.
 $$

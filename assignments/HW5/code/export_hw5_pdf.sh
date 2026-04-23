@@ -11,7 +11,7 @@ CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 pandoc "$SRC" \
   --standalone \
-  --from gfm+tex_math_dollars \
+  --from markdown+tex_math_dollars \
   --to html5 \
   --mathml \
   --include-before-body="$HEADER" \
